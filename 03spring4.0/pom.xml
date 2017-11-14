@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fxb.spring4.0</groupId>
+    <artifactId>spring4.0</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>chapter4-IOC</module>
+        <module>chapter5-IoCLoadBean</module>
+        <module>chapter6-inside</module>
+        <module>chapter7-aop</module>
+        <module>chapter8-aspectJ</module>
+        <module>chapter9-springEL</module>
+        <module>chapter10-springSupportDao</module>
+        <module>chapter11-springSupportTransaction</module>
+        <module>chapter14-SpringSupportHibernate</module>
+        <module>chapter14-springSupportMybatis</module>
+        <module>chapter15-SpringCache</module>
+        <module>chapter16-springTaskSchedule</module>
+        <module>chapter19-oxm</module>
+        <module>chapter3-springboot</module>
+    </modules>
+
+
+</project>

@@ -1,0 +1,17 @@
+1.IoC概述
+    中文：控制反转(inverse of control)
+    IoC是Spring容器的内核，AOP,声明式事务等功能的基础。
+    两个概念：  控制  反转
+        某一个接口具体实现类的选择控制权从调用类中移除，转交给spring容器来控制。
+2.IoC的类型：
+    IoC主要可以分为3中类型：构造函数注入，属性注入，接口注入。
+3. 通过容器完成依赖关系的注入
+
+4.BeanFactory 和ApplicationContext
+    父子容器：
+        通过HierarchicalBeanFactory接口，Spring的Ioc容器可以建立父子层级关联的容器体系，子容器可以访问父容器中的Bean，
+        但父容器不能访问子容器中的bean。父子容器层级体系增强了Spring容器架构的扩展性和灵活性。
+        因为第三方可以通过编程的方式为一个已经存在的容器添加一个或者多个特殊用途的子容器。以提供一些额外的功能。
+5.Spring Bean的生命周期：
+    BeanFactory中Bean的生命周期
+

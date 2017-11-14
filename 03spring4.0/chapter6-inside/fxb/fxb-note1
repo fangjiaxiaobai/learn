@@ -1,0 +1,157 @@
+6.1 Spring  技术内幕；
+
+ 6.1   内部工作机制
+        spring的AbstractApplicationContext是ApplicationContext的抽象实现类。
+        该抽象类的refresh()方法定义了Spring定义了Spring容器在加载配置文件后的各项处理过程，
+        这些过程清晰的刻画了SPring的容器启动时所执行的各项操作。
+源码如下：
+ public void refresh() throws BeansException, IllegalStateException {
+        Object var1 = this.startupShutdownMonitor;
+        synchronized(this.startupShutdownMonitor) {
+            this.prepareRefresh();
+            // 1.spring将配置文件的信息装入容器的Bean定义注册表(BeanDefinitionRegistry)中，
+            // 但是，此时Bean还未初始化。
+            ConfigurableListableBeanFactory beanFactory = this.obtainFreshBeanFactory();
+            this.prepareBeanFactory(beanFactory);
+
+            try {
+                this.postProcessBeanFactory(beanFactory);
+                // 2.调用工厂后处理器。根据反射机制从BeanDefinitionRegistry中找出所有实现了BeanFactoryPostProcessor接口的
+                //Bean，并调用其postProcessBeanFactory的接口方法。
+                this.invokeBeanFactoryPostProcessors(beanFactory);
+                // 3.注册Bean后处理器，根据反射机制从BeanDefinitionRegistry中找出所有实现了BeanPostProcessor接口的Bean。
+                //并将它们注册到容器Bean后处理器的注册表中。
+                this.registerBeanPostProcessors(beanFactory);
+                // 4.初始化消息源，初始化容器的国际化消息资源
+                this.initMessageSource();
+                // 5.初始化应用上下文事件广播器
+                this.initApplicationEventMulticaster();
+                // 6.初始化其他特殊的Bean：由具体子类实现。
+                //  这个是一个钩子方法。子类可以借助这个方法执行一些特殊的操作，
+                this.onRefresh();
+                // 7. 注册事件监听器
+                this.registerListeners();
+                // 8. 初始化所有单实例的Bean，使用懒加载模式的Bean除外，初始化Bean后，将它们放入SPring容器的缓存池中。
+                this.finishBeanFactoryInitialization(beanFactory);
+                // 9.发布上下文刷新事件：创建上下文刷新事件，事件广播器负责将这些事件广播到每个注册的事件监听器中。
+                this.finishRefresh();
+            } catch (BeansException var9) {
+                if(this.logger.isWarnEnabled()) {
+                    this.logger.warn("Exception encountered during context initialization - cancelling refresh attempt: " + var9);
+                }
+
+                this.destroyBeans();
+                this.cancelRefresh(var9);
+                throw var9;
+            } finally {
+                this.resetCommonCaches();
+            }
+
+        }
+    }
+
+在Spring框架的源码中：
+      接口层描述了容器的重要组件及组件间的协作关系。
+      集成体系逐步实现组件的各项功能。
+
+Spring组件按其所承担的角色可以分为两大类；
+    物料物件：Resource，BeanDefinition，PropertyEditor及最终的Bean等，
+        它们是加工流程中被加工的，被消费组件，就像流水线上被加工的物料一样。
+    设备组件：ResourceLoader，BeanDefinitionReader，BeanFactoryPostProcessor,InstantiationStrategy,
+        及BeanWrapper等，它们就像流水线上不同华姐的加工设备，对物料组件进行加工处理。
+
+    1.BeanDefinition
+        org.springframework.beans.factory.config.BeanDefinition 是配置文件<bean>元素标签在容器中的内部表示。
+        <bean>元素标签拥有class，scope，lazy-init等属性，BeanDefinition提供了相应的BeanClass，Scope，LazyInit类属性。
+        二者对应。
+
+        创建BeanDefinition主要是两个步骤：
+            1.利用BeanDefinitionReader读取承载配置信息的Resource，通过XMl解析器解析配置信息的DOM对象，为每个<Bean>生成对应的BeanDefinition对象。
+            2.利用容器注册的BeanFactoryPostProcessor对半成品的BeanDefinition进行加工处理。
+                将以占位符表示的配置解析为最终的实际值。
+    2.InstantitionStrategy:
+           org.springframework.beans.factory.support.InstantiationStrategy负责根据BeanDefinition对象创建一个Bean实例。
+           spring将实例化Bean的工作交给策略接口，可以方便的采用不同的实例化策略。满足不同的应用需求。
+        InstantitionStrategy仅负责实例化Bean的操作，相当于执行java语言中new的功能。它并不会参与Bean属性的设置工作。
+        剩下的交给BeanWrapper完成。
+    3.BeanWrapper：
+        org.springframework.beans.BeanWrapper 相当于一个代理器，Spring委托BeanWrapper完成Bean属性的填充工作。在Bean实例被
+        InstantiationStrategy创建出来后，容器主控程序将Bean实例通过BeanWrapper包装起来。这是通过调用BeanWrapper#setWrappedInstance(Object obj)
+        方法完成的。
+
+        通过BeanWrapper的继承结构，可以看出BeanWrapper实现类BeanWrapperImpl具有三重身份：
+            Bean包裹器，属性访问器，属性编辑器注册表。
+        一个BeanWrapper实例中内部封装了两类组件，被封装的待处理Bean，以及一套用于设置Bean属性的属性编辑器。
+6.2  属性编辑器：
+       任何实现了java.beans.PropertyEditor接口的类，都是属性编辑器。
+       属性编辑器的主要功能就是将外部的设置值装换为JVM内部的对应类型。所以属性编辑器就是一个类型装换器。
+
+    2.1  javaBean的编辑器
+        PropertyEditor：
+              属性编辑器的接口，它规定了将外部设置值装换为内部javaBean属性值的转换接口方法。
+              PropertyEditor接口方法是内部属性值和外部设置值的沟通桥梁。
+            java为PropertyEditor提供了一些方便类PropertyEditorSupport，实现了PropertyEditor接口并提供了默认实现。
+        BeanInfo
+            主要描述javaBean的那些属性可以编辑及对应的属性编辑器。每个属性对应着一个属性描述器PropertryDescriptor。
+
+    2.2 Spring默认属性编辑器：
+    2.3 自定义属性编辑器：
+
+6.3 使用外部属性文件：
+     1.   spring提供了一个PropertyPlaceholderConfigurer.它能够使Bean在配置时引用外部属性文件。PropertyPlaceholderConfigurer实现了BeanFactoryPostProcessorBeanjiekou .
+    因而这个也是Bean工厂后处理器。
+        1.使用PropertyPlaceholderConfigurer配置(动词)文件、
+       <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+        p:location="classpath:/" p:fileEncoding="utf-8" />
+        2. 使用<context:property-placeholder location="" /> 引用属性文件。
+        4. 在基于注解及基于java类的配置中引用属性
+            @Value
+    2.  加密属性文件
+    3. 属性文件自身的引用
+        dbName=testDemo
+        url=jdbc:mysql://localhost:306/${dbName}
+
+6.4 引用Bean的属性值
+
+6.5 国际化信息
+    Spring定义了访问国际化信息的MessageSource接口，并提供了若干个已用的实现类。
+
+6.6  容器事件
+    Spring的ApplicationContext能够发布时间并且允许注册相应的时间监听器，因此，他拥有完善的时间发布和监听机制。
+   1. Spring事件类结构：
+       ApplicationEvent的唯一构造函数是ApplicationContext(Object source),通过source指定事件源，它有两个子类。
+       ApplicationContextEvent：容器事件，他拥有4个子类，分别表示容器启动，刷新，停止和关闭
+       RequestHandleEvent ： 当一个HTTP请求呗处理后，产生该事件。
+        只有在web.xml中定义了DispatcherServlet时才会产生该事件。它拥有两个子类，分别代表了Servlet及Portlet的请求事件。
+   2. 事件监听器接口
+        Spring的事件监听器都继承自ApplicationListener接口：
+        Spring3.0 添加了SmartApplicationListener接口，它定义了两个方法：
+            boolean supportsEventType(Class<? extends ApplicationEvent> eventType ) 指定监听器支持那种类型的容器事件，它只会对该类型的时间做出响应。
+            Boolean supportsSourceType(Class<?> sourceType) :指定监听器仅对何种时间源对象做出响应。
+        spring4.2 添加了GenericApplicationListener接口，它
+            增强了对泛型事件类型的支持。supportsEventType()方法的参数不在仅限于ApplicationEvent子类型。而是采用可解析类型ResolvableType。
+            boolean supportsEventType(ResolvableType eventType)：指定监听器是否实际支持给定的时间类型，
+            boolean supportsSourceType(Class<?> sourceType) :指定监听器仅对何种时间源对象做出响应。
+
+    3. 事件广播器
+        当发生容器事件是，容器主控程序将调用事件广播器将时间通知给事件监听器注册表中的事件监听器，事件监听器分别对事件进行响应。
+
+6.6.2  解构Spring事件体系的具体实现
+    spring在APplicationContext接口的抽象实现类AbstractApplicationContext中完成了事件体系的搭建。
+    AbstractApplicationContext拥有一个applicationEventMulticaster成员变量，ApplicationEventMulticaster提供了容器监听器的注册表。
+        在上面的源码中5 就是初始化事件的广播器。
+        7 则通过反射机制，从BeanDefinitionRegitry中找出所有实现了org.springframork.context.applicationListener的Bean。将他们注册为容器的事件监听器。
+            实际操作就是将其太你就爱到世家你广播器所提供的事件监听器注册表中。
+         9 容器启动完成，调用事件发布接口中所有的监听器发布事件。
+
+
+
+
+
+
+
+
+
+
+
+

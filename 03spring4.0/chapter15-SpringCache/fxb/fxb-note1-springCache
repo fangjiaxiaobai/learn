@@ -1,0 +1,133 @@
+主要内容：
+    缓存的基本概念
+    Spring对Cache的支持
+    自定义Cache注解的使用
+    与企业级缓存的集成
+
+1.缓存的概述
+
+    可将缓存定义为一种存储机制，他将数据保存在某个地方，并以一种更快的方式提供服务。
+    较为常见的一种情况是在应用中使用缓存机制，以避免方法的多次执行，从而克服性能缺陷，
+    也可减少应用服务器或者数据库的压力。
+    通常在Web应用开发中，不同层级对应的缓存要求和缓存策略全然不同，
+        **见图15-01 系统层级对应的缓存层级技术。
+
+    1. 缓存中两个重要的概念：
+        从缓存中读取数据的次数和总读取次数的比率。 命中率越高越好。
+        命中率 = 从缓存中读取的次数 / (总读取次数[从缓存中读取的次数+从慢速设备上读取的次数])
+        Miss率 = 没有从缓存中读取的次数 / 总读取次数[从缓存中读取的次数+从慢速设备上读取的次数])
+        这是一个非常重要的指标，
+    2.过期策略
+        1.FIFO 先进先出策略。
+        2.LRU 最久未使用策略
+        3.LFU 最近最少使用策略
+        4.TTL 存活期策略
+        5.TTI  空闲期策略
+
+    Spring提供了一种可以在方法级别进行缓存的缓存抽象。通过AOP对方法进行织入。使用AOP缓存，需要缓存注解对其标记。以便Spring为其生成具备缓存功能的代理类。
+    Spring Cache带来的好处
+        支持开箱即用，并提供基本的Cache抽象，方便切换各种底层。
+        类似于Spring提供的数据库事务管理，通过Cache注解即可实现缓存逻辑透明化，让开发者关注业务逻辑。
+        当事务回滚，缓存也会自动回滚。
+        支持比较复杂的缓存逻辑
+        提供缓存编程的一致性抽象，方便代码维护。
+    缺点：
+        当应用处于分布式或者集群环境下，需要针对具体的缓存进行相应的配置。
+        Spring Cache没有锁的概念。
+
+    2.使用Spring Cache
+       自定义缓存；见demo1
+       使用springCache 见demo2
+            由demo2可见：
+                使用spring Cache很简单，开发人员只需要完成两个步骤即可
+                    缓存定义：确定需要缓存的方法和缓存策略。
+                    缓存配置：配置缓存。
+2.  掌握Spring Cache的抽象：
+    Spring Cache提供了5种可在方法级和类级上使用的缓存注解。只有public修饰的方法才会被缓存。
+    这些注解定义了哪些方法的返回值会被缓存或者从缓存中移除。
+    当在一个类上使用注解时，该类中的每个公共方法的返回值都被缓存到指定的缓存项中，或者从中移除。
+    1.@Cacheable
+        指定了被注解的方法的返回值是可被缓存的。
+        原理：Spring首先在缓存中查找数据，如果没有则执行方法并缓存结果，然后返回数据
+            缓存的key生成器：
+        缓存的本质就是键/值对集合，默认情况下，缓存抽象使用方法签名及参数值作为一个键值，并将该键和方法调用的结果组成键值对。如果在Cache注解上没有指定key，
+        则spring会使用KeyGenerator来生成一个key。
+        spring4.x 默认使用SimpleKeyGenerator生成key。
+        还可以自定义key生成器。实现org.springframework.cache.interceptor.KeyGenerator接口。
+            2.带条件的缓存：
+        使用@Cacheable注解的从condition属性，可按条件进行缓存。condition属性使用了SpEL表达式动态评估方法入参是否满足缓存条件。
+        **见图15-1 cacheable注解参数说明
+
+    2.@CachePut
+        当希望使用方法返回值来更新缓存是，可以选择这种方法，和@Cacheable效果一致。
+        详见图15-2 CachePut注解参数说明
+
+        注意：
+            1.不能同时使用@CachePut和@Cacheable注解，@Cacheable注解跳过方法直接获取缓存，@CachePut会强制执行方法以更新缓存，
+            2.@CachePut注解的Condition属性设置的缓存条件也不应该依赖于方法的结果因为缓存调剂那是方法执行前预先证明的。
+
+    3. @CacheEvict
+        负责从给定的缓存中移除一个值。使用该注解，可以显示地从缓存中删除一个失效的缓存数据。
+        属性：
+            allEntries：是否需要清除缓存中的所有元素。
+            beforeInvocation：可以改变触发清除操作的时间，当为true时，Spring会在调用该方法之前清除缓存中的指定元素。
+
+    4. @Caching
+        组注解，可以为一个方法定义提供基于@Cacheable，@CacheEvict 或者@CachePut注解的数组。
+
+    5. @CacheConfig
+        类级别的全局缓存注解。
+
+
+    缓存管理器：
+        1.SimpleCacheManager：
+            通过使用SimpleCacheManager可以配置缓存列表，并利用这些缓存进行相关的操作。
+        2.NoOpCacheManager
+            用于测试目的，但是实际上它并不缓存任何数据。
+        2. ConcurrentMapCacheManager
+            使用了JDK的ConcurrentMap。该缓存定义如下：
+                <bean id="cacheManager" class="org.....ConcurrentMapCacheManager" />
+        4. CompositeCacheManager
+            能够定义多个缓存管理器。将多个缓存管理器定义组合在一起，从而扩展了该功能。
+
+    使用SpEL表达式
+        见图15-4 SpEL表达式。
+
+    基于XML的Cache声明
+        见demo2   applicationContext.xml
+
+    集成其他缓存框架：
+        Ehcache:
+        <bean id="cacheManager" class="org....EhcacheCacheManager" p:cacheManager="ehcache" />
+        <bean id="ehcache" class="org..EhcacheManagerFactoryBean" p:configLocation="classpath:ehcache.xml" />
+        详情配置参考Ehcache的相关文档。
+
+        Guava
+            Guava 是Google贡献的一个开源公共库，提供了缓存功能。spring4.0开始支持Guava。
+            <bean id="cacheManager" class="org...GuavaCacheManager" />
+            只需要定义cacheManagerBean就可以获取配置并运行，同时，没必要定制缓存，因为它们将在需要时创建。
+
+        HazelCast
+            业界流行的java分布式内存网络框架之一。
+
+        GemFire
+            一个需要商业许可的数据管理平台，提供了基于分布式体系结构的数据访问功能.
+            GemFire同时提供了一个内存数据网络。具备极高的吞吐量，低延迟的数据访问和可扩展性。
+
+        JSR-107 Cache：
+            从Spring4.0开始全面支持JSR-107规范，
+
+
+    实战经验：
+        1.非public方法问题，必须采用基于AspectJ的AOP机制。
+        2.基于Proxy的Spring AOP带来的内部调用问题。
+        3.@CacheEvict 的可靠性问题
+            如果被注解标识的方法过程中出现异常，则会导致缓存清空而不被执行。
+        4.运行期开发
+
+
+
+
+
+
+

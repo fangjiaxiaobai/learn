@@ -1,0 +1,81 @@
+16. 任务调度和异步执行器
+
+    Quartz知识和Spring的支持
+    JDK Timer知识和Spring的支持
+    Executor知识和Spring所提供的抽象
+    在实际应用开发中任务调度程序所需注意的问题
+
+
+1.Quartz
+    Quartz对任务调度的领域问题进行了高度抽象，提出了调度器，任务和触发器这三个核心的概念。
+         Job：是一个接口，只有一个方法void execute(JobExecutionContext context)
+    通过这个接口来定义所需实现的任务，JobExecutionContext类提供了调度上下文的各种信息。Job运行时的信息会保存在JobDataMap中。
+        JobDetail：Quartz在每次执行JOb时，都会重新创建一个Job实例，所以它不是直接接受一个Job实例，而是接收一个Job实现类，以便运行时通过
+    newInstance()的反射机制实例化Job，因此需要一个类来描述Job的实现类及其他相关的静态信息，如Job名称，描述，关联监听器等信息。
+        Trigger：描述触发Job执行的时间触发规则。主要有SimpleTrigger和CronTrigger这两个子类。
+        Calendar：一个Trigger可以和多个Calendar关联，以便排除或者包含某些特定的时间点。
+        Scheduler：代表Quartz的独立运行容器，Trigger和JobDetail可以注册到Scheduler中，二者在Scheduler中拥有各自的组和名称。
+    组和名称是Scheduler查找定位容器中某一个对象的依据。Trigger的组和名称必须唯一，JobDetail的组及名称的组和也必须唯一。
+    Scheduler定义了多个接口方法，允许外部通过组和名称访问和控制容器中的Trigger和JobDetail。Scheduler可以讲Trigger绑定到某一个JobDetail中，
+    这样，当Trigger被触发是，对应的Job就被执行。
+    一个JOb可以对应多个Trigger，一个Trigger只能对应一个Job。
+        ThreadPool 任务通过共享线程池的线程来提供运行效率
+
+        StatefulJob是Job的子接口，代表有状态的job。
+        无状态任务在执行时候拥有自己的JobDataMap复制，对JobDataMap的更改不会影响下次的执行。
+        有状态任务共享同一个JobDataMap实例，每次任务执行对JobDatMap所做的更改会保存下来。即每次执行任务后都会对后面的执行产生影响。
+        无状态的Job可以并发执行，有状态的Job不可以并发执行。
+        如果Quartz使用了数据持久化任务调度信息，则无状态的JobDataMap仅会在Scheduler注册任务时保存一次，而有状态任务对应的JobDataMap在每次执行任务后都会进行保存。
+
+    详细见 图16-1 Scheduler内部组件结构图
+    Scheduler本身就是一个容器,它维护这Quartz的各种组件并实施调度的规则。Scheduler还拥有一个线程池，线程池为任务提供执行线程。
+    这比执行任务时简单地创建一个新线程要拥有更高的效率，同时通过共享机制可以减少资源的占用。
+
+    2.使用SimpleTrigger com.fxb.schedule.demo1_
+
+    3.使用CronTrigger   com.fxb.schedule.demo2_
+
+    4.使用Calendar      com.fxb.schedule.demo3_
+
+    5.任务调度信息的存储
+        1.通过配置文件调整任务调度信息的保存策略。
+        Quartz JAR文件的org.quartz的包下就包含了quartz.properties属性配置文件，并提供了默认设置。如果要调整期默认配置，则可以通过在类路径
+    下新建一个quartz.properties文件，他将自动被quartz加载并覆盖。
+        quartz的属性配置文件主要包括三方面的信息：
+            集群信息
+            调度器线程池
+            任务调度现场数据的保存
+
+    具体的配置 不详写了
+
+3.  在Spring中使用Quartz
+
+
+4.在Spring中使用JDK Timer
+    JDK Timer只适合对执行时间非常短的任务进行调度，因为在Timer中所有的Timer Task都在同一背景线程中执行。长时间的任务会严重影响到Timer的调度工作。
+  1.TimeTask 代表一个被调度的任务，每次执行任务的时候，Quartz都会创建一个Job实例，而JDK Timer则会使用相同的Timer Task实例。
+  2.Timer 在延迟一段时间或在指定的时间点后运行一次任务或周期性的执行任务。在Timer内部使用Object.wait(long time)进行任务的时间调度。
+5. Spring对Java 5.0 Executor的支持
+    java.util.concurrent包，是java1.5之后新增的一个包。提供了功能强大的高层次的线程构造器，包含至此昂起，线程任务框架，线程安全队列，计时器，锁和其他一些同步的基本类型。
+
+        java.util.concurrent.Executor接口的主要目的是将任务提交和任务执行分离解耦。
+    该接口定义了任务提交的方法，实现者可以提供不同的任务执行机制，指定不同的线程使用规则和调度方案。
+        java5.0 提供了ThreadPoolExecutor类实现了Executor和ExecutorService这两个接口，它使用了一个线程池对提交的任务进行调度。
+
+    使用案例：com.fxb.schedule.demo4_
+
+        spring的org.springframework.core.task.taskExecutor接口等同偶遇java.util.concurrent.Executor接口。该接口和java5.0的Executor接口
+    拥有相同的execute(Runnable task)方法。子接口SchedulingTaskExecutor子接口，新增了任务调度规则定制的功能。
+
+
+
+
+
+
+
+
+
+
+
+
+

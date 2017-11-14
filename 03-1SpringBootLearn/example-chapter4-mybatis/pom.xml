@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>SpringBootLearn</artifactId>
+        <groupId>com.fxb.springBootLearn</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fxb.springBootLearn</groupId>
+    <artifactId>example-chapter-mybatis</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>example-chapter-mysql</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- Springboot自动化配置Mybatis框架并支持通用Mapper和分页插件-->
+        <!-- https://mvnrepository.com/artifact/com.ruijc/spring-boot-starter-mybatis -->
+        <!--<dependency>-->
+            <!--<groupId>com.ruijc</groupId>-->
+            <!--<artifactId>spring-boot-starter-mybatis</artifactId>-->
+            <!--<version>2.0.0</version>-->
+        <!--</dependency>-->
+
+
+        <!-- mybatis 连接 -->
+        <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

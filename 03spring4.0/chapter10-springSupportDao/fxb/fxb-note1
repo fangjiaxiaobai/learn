@@ -1,0 +1,79 @@
+Spring对DAO的支持；
+    Spring对多个持久化技术提供了集成支持，包括Hibernate，MyBatis，JPA，JDO，
+    此外还提供了简化JDBC API操作的SpringJDBC框架，
+
+10.1  Spring的DAO理念：
+    DAO（DATA Access Object） 用于访问数据的对象。
+    DAO 不但屏蔽了数据存储的最终介质的不同，也屏蔽了具体的实现技术的不同。
+    Spring本质上希望以统一的方式整合底层的持久化技术，即以统一的方式进行调用及事务管理，避免让具体的实现侵入到业务层的代码中。
+    由于每种持久化技术都有各自的异常体系，所有Spring提供了统一的异常体系。
+
+10.2 统一的异常体系：
+    统一的异常体系是整合不同的持久化技术的关键。Spring提供了一套和实现技术无关的，面向DAO层语义的异常体系，并通过转换器将不同持久化技术的异常转换成Spring的异常。
+    10.2.1  Spring的DAO异常体系：
+        Spring在org.springframework.dao包中听筒了一套完备的DAO异常体系，这些异常都继承于DataAccessException
+            而DataAccessException本身又集成子NestedRuntimeException,NestedRuntimeException异常以嵌套的方式封装了源异常。
+        Spring的DAO异常体系并不和具体的实现技术相关，它从DAO概念的抽象层面定义了异常的目录树。
+        Spring以分类手法建立了异常分类目录，对部分应用来说，这个异常分类目录对异常的划分具有适当的颗粒度。
+            一方面，使开发者从底层细如针麻的技术细节中脱离出来。
+            另一方面，可以从这个语义丰富的异常体系中选择感兴趣的异常加以处理。
+    Spring的这个异常体系具有高度的可扩展性，当Sping需要对一种新的持久化技术提供支持时，只要为其定义了一个对应的子异常就可以，这种更改完全满足设计模式中的开闭原则。
+
+    10.2.2 JDBC的异常转换器
+        SQLException拥有两个代表异常具体原因的属性：错误码和Sql状态码。Spring根据错误码和Sql状态码将SQLException翻译成Spring DAO的异常体系对应的异常。
+    10.2.3  其他持久化技术的异常转换器：
+        Spring4.0移除了Hibernate低版本的支持，只支持hiberate3.6之后的版本。
+        spring4.0移除了TopLink的支持。Spring在org.springframework.orm包中，分别Spring所支持的ORM持久化定义了一个子包。
+            在这些子包中提供相应的ORM技术的整合类。
+
+10.3  统一数据访问模板：
+     见图 4.SpringDao模板和回调。
+     10.3.2  Spring为各种支持的持久化都提供了简化操作的模板和回调，在回调中编写具体的数据操作逻辑，使用模板执行数据操作。
+        在Spring中，这就是典型的数据操作模式。
+        见图 5.不同持久化技术对应的模板类
+
+            如果直接使用模板类，则一般需要在DAO中定义一个模板对象并提供数据资源。Spring为每种持久化技术都提供了支持类，支持类中已经完成了这样的功能。
+            见图6  持久化技术的支持类 。
+10.4  数据源
+    不管采用何种持久化技术，都必须拥有数据连接。
+        在Spring中，数据连接通过数据源获得的。不但可以通过JNDI获取应用服务器的数据源，也可以直接在Spring容器中配置数据源。
+        此外还可以通过代码的方式创建一个数据源，以便进行吴荣依赖的单元测试。
+    10.4.1  Spring在第三方依赖中包含了两个数据源的实现类包:
+        其一是：apache的DBCP，其二是C3p0.可以在SPring配置文件中利用二者的任何一个配置数据源。
+        DBCP数据源：
+            DBCP是一个依赖Jakarta commons-pool对象池机制的数据库连接池，所以在类路径下还必须包括commons-pool的类包。
+            <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destory-method="close"
+                p:driverClassName="com.mysql.jdbc.Driver"
+                p:url="jdbc:mysql://localhost:3309/sampledb"
+                p:username="root"
+                p:password="123" />
+            BasicDataSource提供了close()方法关闭数据源，所以必须设定destory-method="close"属性，以便SPring容器关闭时，数据源能正常关闭。
+                （Mysql在默认情况下如果发现一个连接的空闲时间超过8个小时，则会在数据库端自动关闭这个连接，但是数据源并不知道这个连接已经被数据库变比了，当它将这个无用的连接返回给某个DAO时，DAO就会报无法获取connection的异常）
+                解决方式：
+                    将testOnBorrow设置为false，testWhileIdle设置为true，再设置好timeBetweenEvictionRunsMillis值。
+                    这样DBCP将通过一个后台线程定时的对空闲连接进行检测，当发现无用的空闲连接是，就会将他们清除掉。只要将timeBetweenEvictionRunsMillis值
+                    为小于8小时，那些被Mysql关闭的空闲连接就可以清除出去，从而避免了8小时问题。
+        C3P0数据源：
+            c3p0是一个开发的JDBC数据源实现项目，实现了JDBC3和JDBC2扩展规范说明的Connection和Statement池。
+10.4.2  获取JNDI数据源：
+    Spring提供了JNDI数据源的JNDIObjectFactoryBean类。
+        <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean" p:jndiName="java:comp/env/jdbc/bbt" />
+10.4.3  Spring的数据源实现类：
+    Spring本身提供了简单的数据源实现类DriverManagerDataSource，它位于org.springframework.jdbc.datasource包中，
+    这个类实现了javax.sql.DataSource接口，但它没有提供池话连接的机制。
+    每次调用getConnection()方法获取新连接时，只是简单的创建一个新的连接。
+    DriverManagerDataSource ds = new DriverManagerDataSource();
+    ds.setDriverClassName("com.mysql.jdbc.Driver");
+    ds.setUrl("jdbc:mysql://localhost:3306/sampledb");
+    ds.setUserName("root");
+    ds.setPassword("1234");
+    Connection actualCon = ds.getConnection();
+
+
+
+
+
+
+
+
+

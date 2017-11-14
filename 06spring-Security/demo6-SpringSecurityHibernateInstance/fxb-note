@@ -1,0 +1,35 @@
+    我们将使用Spring Security，Hibernate+MySQL数据库来集成构建一个成熟的Spring MVC应用程序。
+处理多对多映射关系，同时利用BCrypt格式加密密码存储，
+和使用自定义PersistentTokenRepository实现Hibernate HibernateTokenRepositoryImpl并提供了 "记住我" 功能，
+从数据库检索和更新记录或在事务中删除它们；
+
+    在这个实例中全部采用注释配置。
+
+以下是一些需要使用到的技术：
+    Spring 4.2.5.RELEASE
+    Spring Security 4.0.4.RELEASE
+    Hibernate Core 4.3.11.Final
+    validation-api 1.1.0.Final
+    hibernate-validator 5.1.3.Final
+    MySQL Server 5.6
+    Maven 3
+    JDK 1.7
+    Tomcat 8.0.21
+    Eclipse MARS.1 Release 4.5.1
+    logback 1.1.7
+
+第一步：
+   在Pom.xml文件中添加依赖。
+第二步：
+    在应用程序中添加Spring Security配置。
+第三步:
+    创建Entity
+
+第四步：
+    创建CustomUserDetailsService
+第五步：
+    创建Service,Dao
+第六步：
+    创建SecurityWebApplicationInitializer
+第七步：
+    配置Hibernate

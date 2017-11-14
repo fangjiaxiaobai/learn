@@ -1,0 +1,16 @@
+第十七章是springMVC
+第十八章是一个项目
+
+第十九章：OXM
+    1.xml解析技术
+        xml 可扩展标记语言。
+
+    2.XMl解析利器  XStream
+        编码方式
+        注解方式
+
+    3.其他OXM项目
+        JAXB
+        Castor
+        JiBX
+    4.Spring OXM实例。

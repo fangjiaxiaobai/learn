@@ -1,0 +1,42 @@
+随着动态语言的流程（ruby，groovy，scala，Node.js）,java开发显得格外笨重：
+繁多的配置，底下的开发效率，复杂的部署流程以及第三方技术集成难度大。
+
+
+
+
+
+SpringApplication 将从以下位置加载application.properties文件，并把它们添加到Spring Environment中：
+    1.当前目录下的一个 /config 子目录
+    2.当前目录
+    3.一个classpath下的 /config 包
+    4.classpath 根路径(root)
+此列表中位置高的将覆盖位置低。
+这个知识点，测试没有成功。
+************************************************************************************************
+
+2. 自定义filter（见example-chapter1）
+使用filters用于调用日志，排除有XSS威胁的字符，执行权限验证等。
+springboot，自动添加了OrderedCharacterEncoding和HiddenHttpMethodFilter。并且我们可以自定义Filter。
+自定义filter，两步：
+    A.实现Filter接口，实现filter方法。
+    B.添加@Configuration注解，将自定义Filter加入过滤链。
+
+
+
+3.Spring 推荐用来代替jsp的thymeleaf模板。
+
+thymeleaf是一款用于渲染XML/XHTML/HTML5内容的模板引擎。类似jsp，velocity，Freemark等。
+他可以轻易的与Spring MVC等web框架进行集成，作为web应用的模板疫情。
+    thymeleaf最大的特点就是能够直接在浏览器中打开并正确显示模板页面，而不需要启动整个web应用。
+    它使用了自然的模板技术。即thymeleaf的模板语法并不会破坏文档结构，模板依旧是有效的xml文档。
+    模板还可以用作工作原型，thymeleaf会在运行期替换掉静态值。
+
+4.spring项目推荐使用Gradle进行项目构建。
+ gradle 更简洁，而且gradle更适合大型复杂项目的构建。gradle是吸收了maven和ant的特点来的。
+
+5.web jars
+    web jars 可以让大家以jar包的形式，来使用前端各种框架，组件。
+    web jars是将客户端(浏览器)资源（javascript,css）等，打成jar包文件，以对资源进行统一依赖管理。
+    web jars的jar包部署在maven中央仓库上。
+
+

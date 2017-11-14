@@ -1,0 +1,12 @@
+ThreadLocal基础知识：
+    java 1.2 版本中就提供了java.lang.ThreadLocal.
+
+     ThreadLocal是保存线程本地化对象的容器。当运行于多线程环境的某个对象使用ThreadLocal维护变量时，
+    ThreadLocal为每个使用该变量的线程分配一个独立的变量副本。所以每个线程都可以独立地改变自己的副本，
+    而不会影响其他线程所对应的副本。从线程的角度看，这个变量就像线程专有的本地变量。
+        InheritableThreadLocal集成于ThreadLocal，它自动为子线程复制一份从父线程那里继承而来的本地变量。
+    在创建子线程时，子线程会接收所有可继承的线程本地变量的初始值。当必须将本地线程白能量自动传送给所有创建的子线程时，
+    应尽可能使用InheritableThreadLocal.
+
+    ThreadLocal为每一个线程维护一份独立的变量副本的原理：
+        在ThreadLocal类中有一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，值为对应线程的变量副本。

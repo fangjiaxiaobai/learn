@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--通过配置使用@AspectJ切面-->
+    <!-- 1 目标Bean -->
+    <bean id="waiter1" class="com.fxb.target.NaiveWaiter" />
+    <!-- 2.使用了@AspectJ注解的切面类 -->
+    <bean class="com.fxb.aspectj.PreGreetingAspect" />
+    <!-- 3.自动代理创建器，自动将@AspectJ注解切面类织入目标Bean中 -->
+    <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />-->
+
+    <!--基于@AspectJ切面的驱动器-->
+    <!--proxy-target-class属性，默认为false，表示使用JDK动态代理技术织入增强，true表示使用CGLib动态代理技术织入增强。-->
+    <aop:aspectj-autoproxy />
+
+    <bean class="com.fxb.aspectj.EnableSellerAspect" />
+
+    <bean class="com.fxb.namedPointcut.TestAspect" id="testAspect" />
+
+</beans>

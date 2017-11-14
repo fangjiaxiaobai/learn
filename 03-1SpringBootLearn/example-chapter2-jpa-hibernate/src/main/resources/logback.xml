@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="60 second" debug="false">
+
+    <!-- 输出日志到控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss} %5level (%file:%line\) %logger{0} -%m]%n </Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <target>
+            System.out
+        </target>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

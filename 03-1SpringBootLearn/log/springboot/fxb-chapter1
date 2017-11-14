@@ -1,0 +1,34 @@
+1.Spring boot核心：
+    1.1基本配置：
+        Spring boot通常有一个名为*Application的入口类，入口类中有一个main方法，这个main方法其实就是一个标准的java应用的入口方法。
+        在main方法中使用SpringApplicaiton.run(class,args),启动Spring boot项目。
+
+        @SpringBootApplication是Spring boot的核心注解，它是一种组合注解。
+        @SpringBootApplication注解主要组合了@Configuration，@EnableAutoConfiguration，@ComponentScan;
+        @EnableAutoConfiguration: 让Spring boot根据类路径中的jar包依赖为当前项目进行自动配置。
+      1.关闭特定的自动配置：
+           @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+      2.定制banner：
+           在src/main/resources新建一个banner.txt
+      3.spring boot的配置文件：
+        Spring boot使用一个全局的配置文件application.properties 或 application.yml，
+        放置在src/main/sources目录或者类路径的/config下。
+      4.使用xml配置：
+        springboot提倡零配置，没有xml配置。但是在实际项目中，可能有一些特殊的要求。你必须使用xml配置。
+        这时我们可以通过spring提供的@ImportResource来加载xml配置。
+        @ImportResource({"classpath:some-context.xml",....})\
+
+      5.spring boot还允许使用properties文件，yaml文件或者命令行参数作为外部配置。
+        命令行参数配置：
+            spring boot基于jar运行，
+            java jar xx.jar [--server.port=8080]
+      6.spring boot 类型安全配置：
+           Spring提供了基于类型安全的配置方式，
+           通过@ConfigurationProperties将properties属性和一个Bean机器属性关联，从而实现类型安全的配置。
+      7.
+
+
+
+
+
+

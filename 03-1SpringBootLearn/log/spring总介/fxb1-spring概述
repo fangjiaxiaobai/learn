@@ -1,0 +1,119 @@
+1.spring简史：
+    1.1  xml配置阶段：
+        spring 1.x 的时代，使用xml配置的开发。
+    1.2 注解配置：
+        在spring2.x时代，随着jdk1.5带来的注解支持，spring提供了声明bean的注解、
+        我们最终选择应用的基本配置用xml，业务配置用注解。
+    2.3 java配置：
+        在spring3.x到现在，spring提供了java配置的能力，使java配置可以让你更加理解你配置的bean。
+
+    spring 4.x和spring boot都推荐使用java配置。
+
+2. spring概述：
+    spring框架是一个轻量级的企业级开发的一站式解决方案。也就是说可以基于spring解决javaEE开发的所有问题。
+    spring框架主要提供了IoC容器，AOP，数据访问，web开发，消息，测试等相关技术的支持。
+
+    spring 使用简单的POJO(plain old java object  无任何限制的普通的java对象)来进行企业级开发。
+    每个被spring管理的java对象称之为bean。而spring提供了IoC容器用来初始化对象，解决对象见的依赖管理和对象的使用。
+
+    2.1 spring的模块化
+        核心容器：
+            spring-core :核心工具类，spring其他模块大量使用spring-core
+            spring-beans： spring定义bean的支持。
+            spring-context：运行时spring容器。
+            spring-context-support：spring容器对第三方的集成支持。
+            spring-expression：使用表达式语言在运行时查询和操作对象。
+        AOP
+            spring-aop：基于代理的aop支持。
+            spring-aspects：基于AspectJ的Aop支持。
+        消息
+            Spring-messaging：spring对消息架构和协议的支持。
+        Web:
+            spring-web: 提供基础的web集成功能，在web项目中提供spring容器。
+            spring-webMvc：提供基于Servlet的springMvc
+            spring-webSocket：提供webSocket功能。
+            spring-webmvc-portlet: 提供Portlet环境支持。
+        数据访问/集成：
+            spring-jdbc：提供以jdbc方式访问数据库的支持
+            spring-tx: 提供编程式和声明式的事务支持。
+            spring-orm：提供对对象/关系映射技术的支持。
+            spring-oxm：提供对对象/xml映射技术的支持。
+            spring-Jms ： 提供对jms的支持。
+    2.2  spring的形态：(书上写的是生态，不懂是什么意思)
+        spring发展到现在不仅仅是一种框架技术了，spring目前提供了大量的基于spring的项目：
+        spring boot： 使用默认开发配置来实现快速开发。
+        spring XD：用来简化大数据应用的开发。
+        spring Cloud： 为分布式系统开发提供工具集。
+        spring Data：对主流的关系型和NoSql数据库的支持。
+        spring Integration： 通过消息机制对企业集成模式(EIP)的支持。
+        Spring batch:简化及优化大量数据的批处理操作
+        spring Security： 通过认证和授权保护应用
+        spring HATEOAS： 基于HATEOAS原则简化REST服务开发。
+        spring Social ：于社交网络API(如FaceBook，新浪微博)的集成。
+        spring AMQP： 对基于AMQP的消息的支持。
+        spring Mobile：提供对手机设备检测的功能，给不同的设备返回不同的页面支持
+        spring for android：主要提供在android上消费Restful API的功能
+        spring web Flow :基于spring MVc提供基于向导流程式的web应用开发。
+        spring web Services:提供了基于协议有限的Soap/web服务。
+        Spring LDAP: 简化使用LSAP开发。
+        spring session：提供了一个API来实现管理用户会话信息
+
+3.AOP 面向切面编程：
+    spring中AOP存在的目的就是为了解耦。AOP可以让一组类共享相同的行为。
+
+    spring 支持AspectJ的注解式切面编程 。
+        1.使用@AspectJ声明这是一个切面。
+        2.使用@After,@Before,@Around定义建言(adivce),可直接将拦截规则(切点)作为参数。
+
+4.spring常用配置：
+    4.1 bean的scope：
+        scope是描述spring容器如何新建bean的实例的。spring的scope有以下几种：通过@Scope注解来实现。
+        1. Singleton：一个Spring容器中只有一个bean的实例。全容器中共享这一个实例。
+        2.Prototype：每次调用都新建一个bean的实例。
+        3.Request：web项目中，给每一个HttpRequest新建一个Bean实例。
+        4.Session：web项目中，给每一个httpSession新建一个Bean实例。
+        5.GlobalSession：这个仔仔protal应用奏效，给每一个global http session新建一个Bean实例。
+    4.2 springEl和资源调用：
+        spring EL-spring表达式语言，支持xml和注解中使用表达式，类似于jsp的EL表达式语言。
+        spring开发中调用各类资源可以使用spring的表达式语言实现资源的注入：---@Value
+            1.注入普通字符 ： @Value("方小白")
+            2.注入表达式结果：@Value("#{T(java.lang.Math).random()*100.0}")
+            3.注入其他Bean属性： @Value("Person.name") 注入Person对象的属性name值。
+            4.注入文件资源：@Value("classpath:config/config.config")
+            5.注入url资源：@Value("http://www.baidu.com");
+    4.3  @Profile
+    4.4 事件
+
+5. spring高级话题：
+    5.1 spring Aware
+        spring的依赖注入的最大亮点就是你所有的bean对spring容器的存在没有意思的。、
+        即你可以将你的容器换成别的容器，这时bean之间的耦合度就很低了。但是，现实不是这样的。
+
+
+
+    5.2 多线程：
+        spring通过任务执行器(taskExecutor)来实现多线程和并发编程。shiyong ThreadPoolTaskExecutor可以实现一个机遇线程池的TaskExecutor。
+        而实际开发中任务一般都是非阻碍的，即异步的。所以我们要在配置类中通过@EnableAsync开启对异步任务的支持，
+            并通过在实际执行的Bean方法中使用@Async注解来声明这是一个异步任务。
+    5.3
+
+
+6.SpringMVC：
+    常用的注解略掉
+        通过@ControllerAdvice，我们可以将对于控制器的全局配置放在同一个位置，注解了@Controller的类的方法可以使用@ExceptionHandler，
+        @IniBinder，@ModelAttribute注解到方法上，这对所有注解了@RequestMapping的控制器内的方法有效。
+        @ExceptionHandler：用于全局处理控制器里的异常。
+        @InitBinder： 用来设置WebDataBinder,WebDataBinder用来自动绑定前台请求参数到Model中。
+        @ModelAttribute： @ModelAttribute本来的作用是绑定键值对到Model里，此处是让全局的@RequestMapping都能或得在此处设置的键值对。
+7.SpringMvc的高级配置：
+    SpringMvc通过配置一个MultipartResolver来上床文件。在spring的控制器中，可以通过MUltipartFile来接收文件，通过MultipartFile[] files接收多个文件上传。
+
+
+8.spring Mvc的测试：
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+Spring 动态表达式语言(Spring EL)
+
+9.1  JVM动态语言
+
+9.2  SpringEl 表达式概述
+    Spring动态语言是一个支持运行时查询和操作对象图的强大的动态语言、
+    SpringEL作为SPring家族中表达式求值的基础，它不直接依赖于Spring框架。可独立使用。
+
+    Spring被设计为可独立运行的模块，可以脱离Spring容器直接运行。
+    1.使用SpringEl，只需创建一个SpelExpressionParser实例。 com.fxb.js.Demo1SpelSayHello
+9.3 SpEL 核心接口
+    SpEL的所有类和接口都定义在org.springframework.expression包以及子包，以及spel.support中。
+    ExpressionParser接口用来解析表达式字符串，
+    Expression接口用来计算表达式字符串的值。
+
+9.4 SpEL 基础表达式
+9.5 在SPring中使用SpEL
+    在XML配置方式或者注解配置方式中，都可以使用SpEl表达式进行一些高级配置，两种方式都采用统一的语言SpEL表达式
+    9.5.1  基于XML配置：
+    9.5.2  基于注解配置：
+           @Value("#{}")

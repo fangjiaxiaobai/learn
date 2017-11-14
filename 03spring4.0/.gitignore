@@ -1,0 +1,18 @@
+/.idea/
+target/
+/src/main/webapp/WEB-INF/classes/
+
+# Eclipse Project Files
+
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA Fi
+
+*.iml
+*.ipr
+*.iws
+*.idea
+*.class
+example-chapter1-helloword/

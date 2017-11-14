@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--<aop:aspect>方式一-->
+    <!--<aop:config proxy-target-class="true">
+        <aop:aspect ref="adviceMethods">
+            <aop:before method="preGreeting" pointcut="target(com.fxb.schema.NaiveWaiter) and execution(* greetTo(..))"/>
+        </aop:aspect>
+    </aop:config>
+-->
+
+    <!--aop:aspect方式二-->
+<!--    <aop:config proxy-target-class="true">
+        <aop:pointcut id="greetToPointcut" expression="target(com.fxb.schema.NaiveWaiter) and execution(* greetTo(..))" />
+        <aop:aspect ref="adviceMethods">
+            <aop:before method="preGreeting" pointcut-ref="greetToPointcut" />
+        </aop:aspect>
+        <aop:aspect ref="adviceMethods">
+            <aop:after-returning method="preGreeting" pointcut-ref="greetToPointcut" />
+        </aop:aspect>
+    </aop:config>-->
+
+    <!--<aop:advisor>方式-->
+    <aop:config proxy-target-class="true">
+        <aop:pointcut id="pointcut" expression="target(com.fxb.schema.NaiveWaiter) and execution(* greetTo(..))" />
+        <aop:advisor advice-ref="adviceMethods2" pointcut-ref="pointcut" />
+    </aop:config>
+
+    <bean id="adviceMethods" class="com.fxb.schema.AdviceMethods" />
+    <bean id="adviceMethods2" class="com.fxb.schema.TestAdvisorAdviceMethods" />
+
+    <bean class="com.fxb.schema.NaiveWaiter" id="naiveWaiter"/>
+    <bean class="com.fxb.schema.NaughtWaiter" id="naughtWaiter" />
+</beans>

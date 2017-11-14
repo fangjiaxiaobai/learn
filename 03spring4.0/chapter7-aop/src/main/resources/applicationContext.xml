@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="greetingBeforeAdvice" class="com.fxb.beforeAdvice.GreetingBeforeAdvice" />
+
+    <bean id="greetingAfterAdvice" class="com.fxb.springConfiguration.GreetingAfterAdvice" />
+
+    <bean id="target" class="com.fxb.beforeAdvice.NaiveWaiter" />
+
+    <!--proxyInterfaces:指定代理的接口，如果是多个可以用<list>元素-->
+    <!--interceptorNames:指定使用的增强,String[] 类型-->
+    <!--target-ref:指定对那个Bean进行处理-->
+    <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:proxyInterfaces="com.fxb.beforeAdvice.Waiter"
+          p:interceptorNames="greetingBeforeAdvice,greetingAfterAdvice"
+          p:target-ref="target"
+    />
+
+    <bean id="greetingAround" class="com.fxb.springConfiguration.GreetingInterceptor" />
+
+
+    <bean id="waiter_interceptor" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:proxyInterfaces="com.fxb.beforeAdvice.Waiter"
+          p:target-ref="target"
+          p:interceptorNames="greetingAround"
+          />
+
+    <bean id="throwInterceptor" class="com.fxb.springConfiguration.TransactionMananger" />
+    <bean id="waiter_throws" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:proxyInterfaces="com.fxb.beforeAdvice.Waiter"
+          p:target-ref="target"
+          p:interceptorNames="throwInterceptor" />
+
+    <bean id="pmonitor" class="com.fxb.introductionEnhancement.ControllablePerformanceMonitor" />
+    <bean id="target_introducer" class="com.fxb.introductionEnhancement.ForumService" />
+
+    <bean id="introducerService" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interfaces="com.fxb.introductionEnhancement.Monitorable"
+          p:target-ref="target_introducer"
+          p:interceptorNames="pmonitor"
+          p:proxyTargetClass="true" />
+
+
+<!--演示 静态方法匹配切面：-->
+    <bean id="waiterTarget" class="com.fxb.chapter6staticAdvisorDemo.advisor.Waiter" />
+    <bean id="sellerTarget" class="com.fxb.chapter6staticAdvisorDemo.advisor.Seller" />
+    <bean id="greetingBeforeAdvice2" class="com.fxb.chapter6staticAdvisorDemo.advisor.GreetingBeforeAdvice" />
+    <!--向切面注入一个前置增强-->
+    <!--将greetingAdvice增强装配到greetingAdvisor切面中，-->
+    <bean id="greetingAdvisor" class="com.fxb.chapter6staticAdvisorDemo.advisor.GreetingAdvisor"
+        p:advice-ref="greetingBeforeAdvice2"
+    />
+
+    <!--通过一个父<bean>定义公共的配置新-->
+    <bean id="parent" abstract="true" class="org.springframework.aop.framework.ProxyFactoryBean"
+        p:interceptorNames="greetingAdvisor"
+          p:proxyTargetClass="true" />
+
+    <bean id="waiter_static" parent="parent" p:target-ref="waiterTarget" />
+    <bean id="seller_static" parent="parent" p:target-ref="sellerTarget" />
+
+<!--演示  静态正则表达式方法匹配切面-->
+    <bean id="regexpAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"
+          p:advice-ref="greetingBeforeAdvice2">
+        <property name="patterns"> <!--用正则表达式定义目标类全限定方法名的匹配模式串-->
+            <list>
+                <value>.*.advisor.*</value>  <!--匹配模式串-->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="regexp_waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="regexpAdvisor"
+          p:target-ref="waiterTarget"
+          p:proxyTargetClass="true"/>
+
+
+<!--动态切面配置-->
+    <bean id="dynamic_waiterTarget" class="com.fxb.chapter6staticAdvisorDemo.advisor.Waiter" />
+    <bean id="dynamic_advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <property name="pointcut">
+            <bean class="com.fxb.chapter8dynamicAdvisor.GreetingDynamicPointcut" />
+        </property>
+        <property name="advice">
+            <bean class="com.fxb.beforeAdvice.GreetingBeforeAdvice" />
+        </property>
+    </bean>
+
+    <bean id="dynamic_waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="dynamic_advisor"
+          p:target-ref="dynamic_waiterTarget"
+          p:proxyTargetClass="true"
+          />
+
+</beans>

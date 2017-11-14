@@ -1,0 +1,66 @@
+Bean元数据在Spring容器中的内部对应物是由一个个BeanDefinition形成的Bean注册表。
+Spring实现了Bean元数据信息内部表示和外部定义的解耦，，spring支持多种形式的Bean配置方式。
+Spring1.0支持xml，Spring2.0新增基于注解配置的支持。
+spring3.0 新增基于java类配置的支持。
+Spring4.0 新增了基于Groovy动态语言配置的支持,支持java8
+
+     Bean配置信息在容器内部建立Bean定义注册表，然后根据注册表加载，实例化Bean，并建立Bean和Bean之间的依赖关系。
+最后将这些准备就绪的Bean放在Bean缓存池中，以供外层的应用程序进行调用。
+
+
+自动装配：
+   自动装配类型：
+     byName，byType，constructor，autordetect。
+   <bean>元素提供了一个指定自动装配类型的属性，autowire="<自动装配类型>"。
+   <beans>元素标签中的default-autowire属性可以配置全局自动匹配。default-autowire属性的默认值为no
+
+5.5  方法注入：
+5.5.1  lookup方法注入：
+    spring IoC 容器拥有复写Bean方法的能力
+    CGlib类包的功劳，CGlib可以在运行期动态操作Class字节码，为Bean创建子类或实现类
+    <bean id="car" class="com.smart.injection.Car" p:brand="奥迪" p:price="20000" scope="prototype" />
+    <bean id="magicBoss" class="com.smart.injectfun.MagicBoss">
+        <lookup-method name="getCar" bean="car" />
+    </bean>
+    lookup方法注入一般在系统同一个Singleton Bean获取一个prototype Bean时使用。
+
+5.5.2 方法替换
+
+    <bean id="boss1" class="com.fxb.Boss1">
+        <!--  使用boss2的MethodReplacer接口方法替换该Bean的getCar()方法   -->
+        <replaced-method name="getCar" replacer="boss2" />
+    </bean>
+
+    <bean id="boss2" class="com.fxb.Boss2" />
+
+5.6  <bean> 之间的关系
+    5.6.1  继承
+        spring中，如果多个<bean>存在相同的配置信息，则Spring允许定义一个父bean，子bean将自动继承父bean的配置信息。
+        <bean id="" class="" parent="parentClass" />
+    5.6.2  依赖
+        spring允许用户通过depends-on属性显示指定Bean前置依赖的bean,前置依赖的Bean会在本Bean实例化前创建好。
+    5.6.3 引用
+        spring提供了一个idref元素标签，可以通过idref引用另一个bean的名字。在容器启动时，spring负责检查引用关系的正确性。
+
+5.7 整合配置文件
+    import
+
+5.8 Bean作用域
+    singleton  在springIoC容器中仅存在一个Bean实例，Bean以单例的方式存在。
+    prototype  每次从容器中调用bean时，都返回一个新的实例即每次调用getBean()时，相当于执行new XxxBean();
+    request    每次Http请求都会创建一个新的bean,该作用域仅适用于Web环境。
+    session    同一个Http session 共享一个Bean，不同的HttpSession适用不同的bean.
+    globalSession  同一个全局Session共享一个Bean，一个用于Portlet环境。
+
+    spring还允许用户自定义Bean的作用域，可以通过org.springframework.beans.factory.config.Scope接口定义新的作用域，
+    再通过org.springframework.bean.factory.config.CustomScopeConfigurer注册自定义的Bean作用域。
+
+
+
+
+
+
+
+
+
+

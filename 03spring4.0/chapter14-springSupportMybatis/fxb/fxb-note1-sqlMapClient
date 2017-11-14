@@ -1,0 +1,6 @@
+
+在Spring中使用Mybatis
+    每个Mybatis的一个程序都以一个SqlSessionFactory对象的实例为核心。
+    SqlSessionFactory对象的实例可以通过SqlSessionFactoryBuilder对象来获得。
+    SqlSessionFactoryBuilder对象可以从XML配置文件或Configureraion类的实例中构建SqlSessionFactory对象。
+

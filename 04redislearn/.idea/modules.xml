@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chapter1-SimpleUse/chapter1-SimpleUse.iml" filepath="$PROJECT_DIR$/chapter1-SimpleUse/chapter1-SimpleUse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter2-SpringSupport/chapter2-SpringSupport.iml" filepath="$PROJECT_DIR$/chapter2-SpringSupport/chapter2-SpringSupport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redislearn.iml" filepath="$PROJECT_DIR$/redislearn.iml" />
+    </modules>
+  </component>
+</project>

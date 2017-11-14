@@ -1,0 +1,98 @@
+基于@AspectJ和Schema的AOP
+    1.使用@Aspect注解定义切面，并织入增强。
+    2.在Xml文件中配置，使用Aspect
+    3.AspectJ语法基础
+        3.1 切点表达式函数
+            aspectJ的切点表达式：关键字+操作参数。
+            execution为关键字。代表目标类执行某一个方法。
+        Spring支持9个@AspectJ切点表达式函数：
+            分为4类：
+        方法切点函数：通过目标类方法的信息定义连接点
+        方法入参切点函数：通过描述目标类入参的信息定义连接点
+        目标类切点函数：通过描述目标类类型的信息定义连接点
+        代理类切点函数：通过描述目标类的代理类的信息定义连接点。
+        **详情查看切点函数.jpg
+
+        在函数入参中使用通配符：@AspectJ支持3种通配符。
+            *：匹配任意字符，但它只能匹配上下文中的一个元素。
+            ..:匹配任意字符，可以匹配上下文的多个元素。
+            +：表示按类型匹配指定类的所有类，必须跟在类名后面，如com.fxb.Waiter+
+                继承或扩展指定类的所有类。同时还包括指定类本身。
+        AspectJ函数按其是否支持通配符及支持的程度，可以分为以下3类：
+            支持所有通配符：execution()和within();
+            仅支持“+”通配符：args(),this(),target().
+            不支持通配符：@args(),@within(),@target(),@annotation
+
+    4.3 逻辑运算符
+        切点表达式由切点函数组成，切点函数之间可以进行逻辑运算，组成符合切点。
+        &&：如：within(com.fxb.*) and args(String) 表示在com.fxb包下所有类并拥有一个String类型入参的方法。
+        ||：如：within(com.fxb.*) or args(String) 表示在com.fxb包下所有类的方法或者拥有一个String入参的方法。
+        ！：如：!within(com.fxb.*) 不在com.fxb包下的方法。
+    4.4 不同增强类型
+        @Before:前置增强
+        @AfterReturning：后置增强
+        @Around：环绕增强
+        @AfterThrowing：抛出增强
+        @After：final 增强
+        @DeclareParents：引介增强
+5. 切点函数详解：
+    切点函数是AspectJ表达式语言的核心，也是使用@AspectJ进行切面定义的难点。
+
+    1.@annotation()
+    2.execution()
+        execution()语法如下：
+    execution(<修饰符模式>? <返回类型模式> <方法名模式>(<参数模式>) <异常模式>?)
+        除了返回类型模式，方法名模式，参数模式之外，其他选项都是可选的。
+        通过方法签名定义切点：
+        2.1 execution(public * *(..)):匹配所有目标类的public方法。
+        2.2 execution(* *To(..)):匹配目标类所有以To为后缀的方法。
+        通过类定义切点：
+        2.3 execution(* com.smart.Waiter.*(..)): 匹配Waiter接口的所有方法，
+        2.4 execution(* com.smart.Waiter+.*(..)):匹配Waiter接口及其所有实现类的方法。
+        通过类包定义切点：
+        2.5 execution(* com.smart.*(..)):匹配com.smart包下所有 类的所有方法。
+        2.6 execution(* com.smart..*(..)):匹配com.smart包，子孙包下的所有方法。
+        2.7 execution(* com..*Dao.find*(..)):匹配报名前缀为com的任何包下类型后缀为Dao的方法，方法名必须以find为前缀。
+        通过方法入参定义切点：
+        2.8 execution(* joke(String,int)):匹配joke(String,int)方法，且joke方法的第一个入参是String，第二个是int。
+        2.8 execution(* joke(String,*)):匹配joke方法，且joke方法的第一个入参是String，第二个是任意类型。
+        2.8 execution(* joke(String,..)):匹配joke方法，且joke方法的第一个入参是String，后面可以有任意个入参且入参类型不限。
+        2.8 execution(* joke(Object+)):匹配joke方法，且joke方法的只有一个入参是Object或者其子类。
+     3. args() 和 @args()
+         args:该函数接收一个类名，表示目标类方法入参对象是指定类（包含子类）时，切点匹配。
+         @args:该函数接口一个注解类的类名，当方法的运行时入参对象标注了指定的注解式，匹配切点。
+    4. within
+    5. @within() 和 @target()
+    6. target()和this()
+        target() 切点函数通过判断目标类是否按类型匹配指定类来决定连接点是否匹配。
+        this() 函数通过判断代理类是否按类型匹配指定类来决定是否和切点匹配。
+6.@AspectJ  进阶
+    1.切点符合运算。
+    2.命名切点
+        通过@Pointcut注解及切面类方法进行命名，
+
+    3. 增强织入的顺序：
+        如果增强在同一个切面类中声明，则按照增强在切面类中定义的顺序进行织入。
+        如果增强位于不同的切面类中，且这些切面类都实现了org.srpingframework.core.Order接口，则由接口方法的顺序号决定(顺序号小的先织入)
+        如果增强位于不同的切面类中，且这些切面类中没有实现org.springframework.core.Order接口，则织入的顺序是不确定的。
+
+    4 访问连接点信息
+        AspectJ使用org.aspectj.lang.JoinPoint接口表示目标类连接点对象。
+        如果是环绕增强，则使用org.aspectj.lang.ProceedingJoinPoint表示连接点对象。该类是JoinPoint的子接口。
+        任何增强方法都可以通过将第一个入参声明为JoinPoint访问连接点上下文信息，。
+
+7.Schema 配置
+
+8.  混合切面类型
+    1.基于@AspectJ注解的方式。
+    2.基于<aop:aspect>的方式
+    3.基于<aop:advisor>的方式
+    4.基于Advisor类的方式。
+    项目采用java 5.0 ，优先考虑使用@AspectJ，
+    如果项目只能使用低版本的JDK，则可以考虑使用<aop:aspect>
+    如果正在升级一个基于低版本SpringAOP开发的项目，则可以考虑使用<aop:advisor>复用已经存在的Advice类。
+    如果项目只能使用低版本的Spring，那么就只能使用Advisor了。
+
+
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chapter1-baseKnowledge/chapter1-baseKnowledge.iml" filepath="$PROJECT_DIR$/chapter1-baseKnowledge/chapter1-baseKnowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fxb-Learn-Concurrency.iml" filepath="$PROJECT_DIR$/fxb-Learn-Concurrency.iml" />
+    </modules>
+  </component>
+</project>

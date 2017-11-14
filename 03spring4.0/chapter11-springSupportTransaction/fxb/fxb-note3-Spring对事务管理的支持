@@ -1,0 +1,31 @@
+Spring对事务管理的支持：
+    事务管理关键抽象：
+        在spring事务管理SPI（service Provider interface）的抽象层主要包括3个接口。
+        PlatformTransactionManager,TransactionDefinition和TransactionStatus。
+        三者之间的关系：见图7Spring事务管理SPI抽象
+    Spring的事务传播行为：
+        Spring在TransactionDefinition接口提供了7种类型的事务传播行为，他们规定了事务方法和事务方法发生嵌套调用时事务如何进行传播。
+     它们规定了事务方法和事务方法发嵌套调用时事务如何进行传播。‘
+        如图8事务传播行为类型
+
+ Spring 最成功的，最吸引人的地方莫过于轻量级的声明式事务管理。
+
+ 如果用户采用了一种高端的ORM技术(Hibernate,jpa,JDO),同时还采用了一种JDBC技术(SpringJDBC，MyBatis) 由于前者的会话(session)
+ 是对后者连接(Connection)的封装，Spring会"足够智能地"在同一个事务线程中让前者的会话封装后者的连接。
+    所以直接采用前者的事务管理器就可以了。
+    混合数据访问技术框架对应的事务管理器如图9 事务隔离级别对并发问题的解决情况
+
+在Spring事务管理中，有些方法不能进行SPring事务增强。
+    对于基于接口动态代理的AOP事务增强来说，由于接口的方法都必须是public的。
+    这就要求实现类的实现方法也必须是public的，不能是protected，private等。
+    同时不能使用static修饰符。所以可以实施接口动态代理的方法只能是使用public或者public final修饰符的方法，
+    其他方法不能被动态代理，相应的永久不能实施AOP增强。就是不能进行Spring事务增强。
+
+
+
+
+
+
+
+
+
