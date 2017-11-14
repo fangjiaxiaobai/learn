@@ -1,0 +1,179 @@
+ // gradle 依赖管理
+ /*
+ apply plugin: 'java'
+ 
+ //存储库
+// 在添加外部依赖关系时， Gradle在存储库中查找它们。
+// 存储库只是文件的集合，按分组，名称和版本来组织构造。
+// 默认情况下，Gradle不定义任何存储库。 我们必须至少明确地定义一个存储库。
+ repositories {
+ //定义maven仓库
+	mavenCentral()
+	
+	//定义远程Maven
+	maven{
+		url "http://repo.mycompany.com/maven2"
+	}
+ }
+ 
+ // 声明依赖关系
+ dependencies{
+	compile group: 'org.hibernate',name: 'hibernate-core',version:'3.6.7.Final'
+	testCompile group: 'junit',name:'junit',version:'4.+'
+ }
+ 
+ //外部依赖是一种依赖。 这是对当前构建之外构建的一些文件的依赖，并且存储在某种类型的存储库中，
+ //例如：Maven central，corporate Maven或lvy repository或本地文件系统中的目录。
+ 
+ dependencies{
+	compile group:'org.hibernate',name:'hibernate-core',version:'3.6.7.Final'
+ }
+ 
+   //发布文件
+//依赖关系配置也用于发布文件。 
+//这些已发布的文件称为工件。 
+//通常，我们使用插件来定义工件。 但是需要告诉Gradle在哪里发布文件。
+//可以通过将存储库附加到上传存档任务来实现此目的。 
+//请查看以下用于发布Maven存储库的语法。 
+//执行时，Gradle将根据项目需求生成并上传Pom.xml。 
+//在build.gradle文件中使用此代码。
+ uploadArchives{
+	repositories {
+		mavenDeployer {
+			repository(url:"file://localhost/tmp/myRepo/")
+		}
+	}
+ }
+ 
+ 
+ //2.gradle 插件
+ // 插件是一组任务，几乎所有的任务，都由插件处理。
+ // 插件类型有两种：脚本插件和二进制插件。
+ // 脚本插件是一个额外的构建脚本，它提供了一种声明性方法来操作构建，通常在构建中使用。 二进制插件是实现插件接口并采用编程方法来操作构建的类。二进制插件可以驻留在插件JAR中的一个构建脚本和项目层次结构或外部。
+ 
+ */
+ //2.1 应用插件
+//	Project.apply() 
+//   脚本插件可以从本地文件系统上的脚本或远程位置应用。 文件系统位置相对于项目目录，而远程脚本位置指定HTTP URL
+//  apply from : 'other.gradle'
+ 
+ //二进制插件：每个插件由插件标识。一些核心插件是使用短名称来应用它，一些社区插件是使用插件ID的完全限定名称。有时它允许指定一个插件类
+ /*
+ //编写自定义插件；
+ 
+ apply plugin: HelloPlugin
+ 
+ class HelloPlugin implements Plugin<Project>{
+	void apply(Project project){
+		project.task('hello') << {
+			println 'hello from the HelloPlugin.'
+		}
+	}
+ }
+ 
+*/
+
+/*
+大多数插件需要从构建脚本中的配置获得支持。 Gradle项目有一个关联“ExtensionContainer”对象，它有助于跟踪传递给插件的所有设置和属性。
+
+apply plugin: HelloPlugin
+
+greeting.message = 'Hi,this from configure Gradle message.'
+
+class HelloPlugin implements Plugin<Project> {
+   void apply(Project project) {
+      // Add the 'greeting' extension object
+      project.extensions.create("greeting", HelloPluginExtension)
+
+      // Add a task that uses the configuration
+      project.task('hello2') << {
+         println project.greeting.message
+      }
+   }
+}
+
+class HelloPluginExtension {
+   def String message = 'Hello,this from HelloPluginExtension message.'
+} 
+ */
+ 
+ /*
+// Gradle为每个扩展对象添加了一个配置闭包，因此可以将分组设置在一起。 看看下面的代码。 在build.gradle文件中使用此代码。
+ 
+ apply plugin: GreetingPlugin
+ 
+ greeting {
+	message = "hi"
+	greeter = "gradle"
+ }
+ 
+ class GreetingPlugin implements Plugin<Project> {
+	void apply(Project project){
+		project.extensions.create("greeting",GreetingPluginExtension)
+		
+		project.task("hello") << {
+			println "${project.greeting.message} from ${project.greeting.greeter}"
+		}
+	}
+ }
+ 
+ class GreetingPluginExtension {
+	String message
+	String greeter
+ }
+ */
+ 
+ 
+ //3. 运行构建
+// Gradle提供了一个命令行来执行构建脚本。 它可以一次执行多个任务。在这里将介绍如何使用不同的选项来执行多个任务
+ 
+task task1 << {
+   println 'compiling source #1'
+}
+
+task task2(dependsOn: task1) << {
+   println 'compiling unit tests #2'
+}
+
+task task3(dependsOn: [task1, task2]) << {
+   println 'running unit tests #3'
+}
+
+task task4(dependsOn: [task1, task3]) << {
+   println 'building the distribution #4'
+}
+ 
+ //使用gradle task1...即可构建
+ // 排除任务用-x选项。   如gradle task4 -x task1
+ // 发生故障是继续构建： gradle -continue
+ //选择执行哪些构建 。。当运行gradle命令时，它在当前目录中查找构建文件。
+ // -b选项选择指定的构建文件的路径。
+ // 在当前目录下新建一个newbuilde.gradle文件。写一个简单的任务。
+ 
+ //获取构建信息
+ // gradle -q projects
+ // 列出任务
+ // gradle -q tasks --all
+ 
+ 
+ /*
+ gradle 命令 机器说明的列表
+ 
+1	gradle –q help –task	提供有关指定任务或多个任务的使用信息（如路径，类型，描述，组）。
+2	gradle –q dependencies	提供所选项目的依赖关系的列表。
+3	gradle -q api:dependencies —configuration	提供有关配置的有限依赖项的列表。
+4	gradle –q buildEnvironment	提供构建脚本依赖项的列表
+5	gradle –q dependencyInsight	提供了一个洞察到一个特定的依赖
+6	gradle –q properties	提供所选项目的属性列表
+ 
+ */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

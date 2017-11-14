@@ -1,0 +1,76 @@
+// 1.添加java插件。因为它提供了编译Java源代码，运行单元测试，创建Javadoc和创建JAR文件的任务。
+apply plugin: 'java'
+
+ // 2.创建java的默认布局。src/main/java，，src/test/java
+ 
+ //3.SourceSets 可用于制定不同的项目结构
+ sourceSets {
+	main{
+		java{
+			srcDir 'src'
+		}
+	}
+	
+	test{
+		java {
+			srcDir 'test'
+		}
+	}
+ }
+
+ 
+ //指定仓库:定义了要从哪里找到依赖
+ repositories{
+	jcenter()
+ }
+
+ //依赖：用于提供有关外部依赖关系的信息
+dependencies{
+	compile 'org.slf4j:slf4j-api:1.7.12'
+	testCompile 'junit:junit:4.12'
+}
+
+//通常，Java项目要有一个版本和一个目标JRE，在其上编译它。version和sourceCompatibility属性可以在build.gradle文件中设置。
+version = 1.8
+sourceCompatibility = 1.8
+
+//如果这是一个可执行的Java应用程序，MANIFEST.MF文件必须要指定具有main方法的类。
+jar {
+	manifest {
+		attributes 'Main-Class':'com.fxb.main.Application'
+	}
+}
+
+test {
+   // enable TestNG support (default is JUnit)
+   useTestNG()
+
+   // set a system property for the test JVM(s)
+   systemProperty 'some.prop', 'value'
+
+   // explicitly include or exclude tests
+   include 'org/foo/**'
+   exclude 'org/boo/**'
+
+   // show standard out and standard error of the test JVM(s) on the console
+   testLogging.showStandardStreams = true
+
+   // set heap size for the test JVM(s)
+   minHeapSize = "64m"
+   maxHeapSize = "512m"
+
+   // set JVM arguments for the test JVM(s)
+   jvmArgs '-XX:MaxPermSize=256m'
+
+   // listen to events in the test execution lifecycle
+   beforeTest { 
+      descriptor → logger.lifecycle("Running test: " + descriptor)
+   }
+
+   // listen to standard out and standard error of the test JVM(s)
+   onOutput { 
+      descriptor, event → logger.lifecycle
+         ("Test: " + descriptor + " produced standard out/err: " 
+         + event.message )
+   }
+}
