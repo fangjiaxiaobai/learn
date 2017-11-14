@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <!--Spring Security 入门程序 xml文件配置方式-->
-        <module>demo1-EnvironmentConstruct</module>
+        <module>demo01-EnvironmentConstruct</module>
         <!--springSecurity 入门程序注解 配置类方式-->
         <module>demo01-EnvironmentConstruct-2</module>
         <!--Spring Security 自定义表单登录实例  配置类方式-->
