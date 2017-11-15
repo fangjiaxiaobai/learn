@@ -1,4 +1,4 @@
-package com.fxb.rbac.common;
+package com.fxb.rbac0.common;
 
 import java.io.Serializable;
 

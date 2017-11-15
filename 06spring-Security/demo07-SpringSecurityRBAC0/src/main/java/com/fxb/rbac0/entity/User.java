@@ -1,6 +1,6 @@
-package com.fxb.rbac.entity;
+package com.fxb.rbac0.entity;
 
-import com.fxb.rbac.common.Entity;
+import com.fxb.rbac0.common.Entity;
 
 /**
  * @author fangxiaobai

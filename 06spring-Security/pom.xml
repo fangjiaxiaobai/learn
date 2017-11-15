@@ -29,11 +29,11 @@
     <repositories>
 
         <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址. -->
-        <repository>
-            <id>nexus-repos</id>
-            <name>Team Nexus Repository</name>
-            <url>http://10.1.16.101:250/nexus/content/groups/PublicRepository/</url>
-        </repository>
+        <!--<repository>-->
+            <!--<id>nexus-repos</id>-->
+            <!--<name>Team Nexus Repository</name>-->
+            <!--<url>http://10.1.16.101:250/nexus/content/groups/PublicRepository/</url>-->
+        <!--</repository>-->
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
@@ -55,6 +55,7 @@
     <properties>
         <spring.version>4.2.3.RELEASE</spring.version>
         <spring.security.version>4.2.3.RELEASE</spring.security.version>
+        <mysql.version>5.1.43</mysql.version>
     </properties>
 
     <dependencies>
