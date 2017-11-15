@@ -20,6 +20,7 @@
         <module>demo05-SpringSecurityHibernate</module>
         <!--比较完成的一个案例-->
         <module>demo6-SpringSecurityHibernateInstance</module>
+        <module>demo07-SpringSecurityRBAC0</module>
     </modules>
     <name>springSecurity Maven Webapp</name>
     <url>http://maven.apache.org</url>
