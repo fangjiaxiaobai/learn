@@ -39,6 +39,7 @@ public class SpringConfiguration {
         return dataSource;
     }
     
+    // mybatis  SessionFactory
     @Bean
     public SqlSessionFactory getSqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -48,14 +49,6 @@ public class SpringConfiguration {
         return sqlSessionFactoryBean.getObject();
     }
     
-    @Bean
-    org.apache.ibatis.mapping.Environment getMybatisEnvironment(){
-        org.apache.ibatis.mapping.Environment environment = new org.apache.ibatis.mapping.Environment(
-                "mybatisSqlSession",null,getDataSource()
-        );
-        return environment;
-    }
-
 }
 
 
