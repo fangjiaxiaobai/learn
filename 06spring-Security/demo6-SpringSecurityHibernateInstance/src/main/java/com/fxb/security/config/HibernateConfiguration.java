@@ -30,6 +30,10 @@ public class HibernateConfiguration {
     @Autowired
     private Environment environment;
     
+    /**
+     * 配置SessionFactory
+     * @return
+     */
     @Bean
     public LocalSessionFactoryBean sessionFactory(){
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
@@ -39,6 +43,10 @@ public class HibernateConfiguration {
         return sessionFactory;
     }
     
+    /**
+     * hibernate的常用配置
+     * @return
+     */
     @Bean
     public Properties hibernateProperties() {
         Properties properties = new Properties();
@@ -48,6 +56,10 @@ public class HibernateConfiguration {
         return properties;
     }
     
+    /**
+     * 配置数据源
+     * @return
+     */
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -58,6 +70,11 @@ public class HibernateConfiguration {
         return dataSource;
     }
     
+    /**
+     * 配置事务管理器
+     * @param sessionFactory
+     * @return
+     */
     @Bean
     @Autowired
     public HibernateTransactionManager transactionManager (SessionFactory sessionFactory){

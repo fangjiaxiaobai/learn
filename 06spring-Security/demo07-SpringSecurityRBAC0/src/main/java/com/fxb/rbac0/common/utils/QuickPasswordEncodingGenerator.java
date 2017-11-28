@@ -1,4 +1,4 @@
-package com.fxb.security.utils;
+package com.fxb.rbac0.common.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

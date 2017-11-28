@@ -69,7 +69,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         logger.info("配置访问规则");
         http.authorizeRequests()
                 .antMatchers("/loginPage").permitAll()
-                .antMatchers("/j_spring_security_check").permitAll()
+                .antMatchers("/doLogin").permitAll()
                 .antMatchers("/static/**").permitAll()
                 .antMatchers("/").access("hasRole('USER')")
                 .antMatchers("/user/", "/user/list").access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
@@ -112,7 +112,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     
     @Bean
     public PersistentTokenBasedRememberMeServices getPersistentTokenBasedRememberMeServices() {
-        PersistentTokenBasedRememberMeServices services = new PersistentTokenBasedRememberMeServices("remember-me", userDetailsService, tokenRepostory);
+        PersistentTokenBasedRememberMeServices services =
+                new PersistentTokenBasedRememberMeServices("remember-me", userDetailsService, tokenRepostory);
         return services;
     }
     

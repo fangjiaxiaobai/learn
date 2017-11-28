@@ -2,6 +2,8 @@ package com.fxb.rbac0.entity;
 
 import com.fxb.rbac0.common.Entity;
 
+import java.util.Set;
+
 /**
  * @author fangxiaobai
  * @date 2017/11/15 11:49.
@@ -13,6 +15,7 @@ public class User extends Entity{
     private String password;
     private String status;
     private String salt;
+    private Set<Role> roles;
     
     public String getUsername() {
         return username;
@@ -44,6 +47,14 @@ public class User extends Entity{
     
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+    
+    public void setRoles(Set <Role> roles) {
+        this.roles = roles;
+    }
+    
+    public Set <Role> getRoles() {
+        return roles;
     }
     
     @Override
