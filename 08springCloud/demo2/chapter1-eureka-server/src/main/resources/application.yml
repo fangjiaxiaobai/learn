@@ -1,0 +1,10 @@
+server:
+  port: 8000
+  address: localhost
+eureka:
+  client:
+    register-with-eureka: false  # 使用register-with-eureka和fetch-registry
+    fetch-registry: false  # =false 来表明自己是server，从而防止自己注册自己。
+    service-url:
+      DefaultZone: http://${server.address}:${server.port}/eureka/
+
