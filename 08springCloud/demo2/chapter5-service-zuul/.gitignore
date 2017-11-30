@@ -22,9 +22,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
-
-*.class
-*.jar
-
-**/.idea/**
