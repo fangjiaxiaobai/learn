@@ -3,3 +3,23 @@
     ribbon+RestTemplate,feign实现的负载均衡  有问题。
     connect timed out executing GET http://service-hi/hi?name=wangxiyue
     单独访问某个服务都是可以的。
+
+
+
+
+
+/*****************************************************************/
+端口使用情况：
+    chapter1-eureka-server : 8000
+    chapter1-eureka-client : 8001
+    chapter2-service-ribbon: 8003
+    chapter3-service-feign : 8004
+    chapter4-ribbon-hystrix: 8005
+    chapter4-feign-hystrix : 8006
+    chapter5-service-zuul : 8007
+    chapter6-config-server 8008
+    chapter7-config-client : 8009
+    chapter9-server-zipkin : 8010
+    chapter9-service-hi :8011
+    chapter9-service-miya : 8012
+    chapter13-dashboard: 8013
