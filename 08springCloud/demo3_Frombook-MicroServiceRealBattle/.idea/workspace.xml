@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutomaticModuleUnloader">
+    <option name="modules">
+      <list>
+        <option value="chapter1-total_introduction" />
+        <option value="chapter2-springbootlearn" />
+      </list>
+    </option>
+    <loaded-modules>
+      <module name="chapter1-total_introduction" />
+      <module name="chapter2-springbootlearn" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b21127d-99c7-4abe-8241-94979335839b" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/chapter2-springbootlearn/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/target/" />
+    <ignored path="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="summery.fxb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/summery.fxb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="95" column="95" lean-forward="false" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>serviceUrl</find>
+      <find>defaultZOne</find>
+      <find>getEurekaServerSer</find>
+      <find>getServiceUrlsMapFromConfig</find>
+      <find>init</find>
+      <find>regist</find>
+      <find>initScheduledTasks</find>
+      <find>register</find>
+      <find>ren</find>
+      <find>renew</find>
+      <find>HeartbeatThread</find>
+      <find>enable</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/chapter1-total_introduction/src/TotalIntroduction.java" />
+        <option value="$PROJECT_DIR$/chapter2-springbootlearn/src/main/java/com/fxb/learn/chapterspringbootlearn/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/chapter2-springbootlearn/src/main/java/com/fxb/learn/chapterspringbootlearn/ChapterSpringbootlearnApplication.java" />
+        <option value="$PROJECT_DIR$/chapter2-springbootlearn/src/test/java/com/fxb/learn/chapterspringbootlearn/ChapterSpringbootlearnApplicationTests.java" />
+        <option value="$PROJECT_DIR$/chapter2-springbootlearn/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter2-springbootlearn/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/src/main/java/com/fxb/learn/eurekaserver/EurekaServerApplication.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/java/com/fxb/learn/eurekaclient/EurekaClientApplication.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/java/com/fxb/learn/eurekaclient2/EurekaClient2Application.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/src/main/java/com/fxb/learn/eurekaserver2/EurekaServer2Application.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/java/com/fxb/learn/loadbalanceribbon/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/java/com/fxb/learn/loadbalanceribbon/LoadBalanceRibbonApplication.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/java/com/fxb/learn/eurekaclient/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/java/com/fxb/learn/eurekaclient2/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/summery.fxb" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
+    <option name="y" value="14" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.41379312" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chapter3-spring-cloud-eureka" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\fxb_myApplication\Learn\08springCloud\demo3_Frombook-MicroServiceRealBattle\chapter3-spring-cloud-eureka\src\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.18405703" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.LoadBalanceRibbonApplication">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fxb.learn.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.fxb.learn.eurekaserver.EurekaServerApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="eureka-server" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration name="ChapterSpringbootlearnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.chapterspringbootlearn.ChapterSpringbootlearnApplication" />
+      <module name="chapter2-springbootlearn" />
+      <envs />
+    </configuration>
+    <configuration name="EurekaClient2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fxb.learn.eurekaclient2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.eurekaclient2.EurekaClient2Application" />
+      <module name="eureka-client2" />
+      <envs />
+    </configuration>
+    <configuration name="EurekaClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fxb.learn.eurekaclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.eurekaclient.EurekaClientApplication" />
+      <module name="eureka-client" />
+      <envs />
+    </configuration>
+    <configuration name="EurekaServer2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fxb.learn.eurekaserver2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.eurekaserver2.EurekaServer2Application" />
+      <module name="eureka-server2" />
+      <envs />
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.eurekaserver.EurekaServerApplication" />
+      <module name="eureka-server" />
+      <envs />
+    </configuration>
+    <configuration name="LoadBalanceRibbonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fxb.learn.loadbalanceribbon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fxb.learn.loadbalanceribbon.LoadBalanceRibbonApplication" />
+      <module name="load-balance-ribbon" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaClientApplication" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.EurekaClient2Application" />
+      <item index="2" class="java.lang.String" itemvalue="Spring Boot.EurekaServer2Application" />
+      <item index="3" class="java.lang.String" itemvalue="Application.EurekaServerApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.LoadBalanceRibbonApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.ChapterSpringbootlearnApplication" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.EurekaServerApplication" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaClient2Application" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.EurekaClientApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.LoadBalanceRibbonApplication" />
+        <item index="3" class="java.lang.String" itemvalue="Spring Boot.EurekaServer2Application" />
+        <item index="4" class="java.lang.String" itemvalue="Application.EurekaServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_NON_PUBLIC,SHOW_PROPERTIES" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b21127d-99c7-4abe-8241-94979335839b" name="Default" comment="" />
+      <created>1512475426371</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1512475426371</updated>
+      <workItem from="1512475431625" duration="6893000" />
+      <workItem from="1512530474575" duration="416000" />
+      <workItem from="1512633972339" duration="15576000" />
+      <workItem from="1512717890581" duration="8595000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ChapterSpringbootlearnApplicationTests_contextLoads - 2017.12.07 at 16h 35m 59s.xml">
+      <configuration name="ChapterSpringbootlearnApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31480000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1632" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3415682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2086514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13040712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13040712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3415682" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2086514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951653" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/summery.fxb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter1-total_introduction/src/TotalIntroduction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1711">
+          <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter1-total_introduction/src/TotalIntroduction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-springbootlearn/src/main/java/com/fxb/learn/chapterspringbootlearn/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-springbootlearn/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-springbootlearn/src/main/java/com/fxb/learn/chapterspringbootlearn/ChapterSpringbootlearnApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-springbootlearn/src/test/java/com/fxb/learn/chapterspringbootlearn/ChapterSpringbootlearnApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-springbootlearn/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/src/main/java/com/fxb/learn/eurekaserver/EurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/src/main/java/com/fxb/learn/eurekaserver2/EurekaServer2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SpringCloudLearning-master/chapter2/service-ribbon/src/main/java/com/forezp/ServiceRibbonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/java/com/fxb/learn/eurekaclient2/EurekaClient2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/java/com/fxb/learn/eurekaclient2/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/java/com/fxb/learn/loadbalanceribbon/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/src/main/java/com/fxb/learn/loadbalanceribbon/LoadBalanceRibbonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#683#684#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/java/com/fxb/learn/eurekaclient/EurekaClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/src/main/java/com/fxb/learn/eurekaclient/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0.jar!/com/netflix/discovery/DiscoveryClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="100" column="63" lean-forward="false" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+          <folding>
+            <marker date="1511938074385" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1511938074385" expanded="false" signature="145:3472" ph="..." />
+            <marker date="1511938074385" expanded="true" signature="3834:3852" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="6090:6108" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="6200:6302" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="6308:6326" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="6468:6541" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="6547:6565" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="6699:6772" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="6875:7003" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="7009:7027" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="7195:7315" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="7466:9125" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="7550:9117" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="7674:9107" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="9324:15886" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="16023:19509" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="17063:17182" ph="getApplications(stalenessThreshold, timeUnit) → {" />
+            <marker date="1511938074385" expanded="false" signature="17739:17754" ph="}" />
+            <marker date="1511938074385" expanded="false" signature="19564:19575" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="19600:19606" ph=" }" />
+            <marker date="1511938074385" expanded="false" signature="19669:19680" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="19715:19721" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="19777:19858" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="19901:19912" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="19960:19966" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="20043:20210" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="20256:20662" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="20722:21174" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="21180:21198" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="21289:21571" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="21648:22044" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="22118:22129" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="22168:22174" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="22254:22319" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="22411:22529" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="22646:23517" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="23635:26024" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="26114:26707" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="26768:27702" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="27744:28441" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="28463:29395" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="29401:29419" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="29530:29641" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="29699:30621" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="30645:31306" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="31374:33302" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="33363:34258" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="34311:34322" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="34359:34365" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="34434:34975" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="35037:36335" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="36416:38186" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="38225:38704" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="38812:41530" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="41581:44808" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="44848:47411" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="46279:46990" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="46318:46341" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="46371:46389" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="46463:46976" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="47453:47881" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="47887:47905" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="48013:48141" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="48147:48165" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="48243:48349" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="48355:48373" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="48487:48567" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="48600:49180" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="49259:49270" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="49305:49311" ph=" }" />
+            <marker date="1511938074385" expanded="false" signature="49370:49381" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="49406:49412" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="49468:50132" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="50184:53071" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="53116:54609" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="54615:54633" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="54638:54663" ph="@{...}" />
+            <marker date="1511938074385" expanded="true" signature="54799:54827" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="54890:55710" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="55766:55777" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="55824:55830" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="55925:56001" ph="{...}" />
+            <marker date="1511938074385" expanded="false" signature="56040:56051" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="56093:56099" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="56149:56370" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="56376:56394" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="56465:56632" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="56638:56656" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="56710:56915" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="56921:56939" ph="/**...*/" />
+            <marker date="1511938074385" expanded="true" signature="57063:57175" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="57232:57407" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="57468:57655" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="57661:57871" ph="@{...}" />
+            <marker date="1511938074385" expanded="true" signature="57936:58120" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="58126:58348" ph="@{...}" />
+            <marker date="1511938074385" expanded="true" signature="58417:58604" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="58610:58785" ph="@{...}" />
+            <marker date="1511938074385" expanded="false" signature="58820:58831" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="58856:58862" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="58922:59016" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="59067:59206" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="59098:59109" ph="{}" />
+            <marker date="1511938074385" expanded="false" signature="59136:59151" ph=" { " />
+            <marker date="1511938074385" expanded="false" signature="59190:59200" ph=" }" />
+            <marker date="1511938074385" expanded="true" signature="59262:59517" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="59298:59309" ph="{}" />
+            <marker date="1511938074385" expanded="true" signature="59337:59511" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="59614:59678" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="59661:59672" ph="{}" />
+            <marker date="1511938074385" expanded="true" signature="59727:60873" ph="{...}" />
+            <marker date="1511938074385" expanded="true" signature="60105:60116" ph="{}" />
+            <marker date="1511938074385" expanded="true" signature="60142:60867" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/discovery/EurekaClientConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="410" column="43" lean-forward="false" selection-start-line="410" selection-start-column="17" selection-end-line="410" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar!/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="66" />
+          <folding>
+            <marker date="1511937698295" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1511937698295" expanded="false" signature="164:758" ph="..." />
+            <marker date="1511937698295" expanded="true" signature="1113:1155" ph="@{...}" />
+            <marker date="1511937698295" expanded="true" signature="3246:3847" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="3887:3898" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="3922:3928" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="3985:3996" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4037:4043" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="4090:4101" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4132:4138" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="4187:4198" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4231:4237" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="4278:4289" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4314:4320" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="4361:4372" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4397:4403" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="4454:4465" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="4504:4510" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="4568:4750" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="4818:5782" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="5829:5840" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="5865:5871" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="5921:5932" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="5966:5972" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6014:6025" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6051:6057" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6094:6105" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6132:6138" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6193:6204" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6243:6249" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="6298:6468" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="6523:6534" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6561:6567" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6618:6629" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6658:6664" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6736:6747" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6788:6794" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6826:6837" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6857:6863" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6908:6919" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="6942:6948" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="6997:7008" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="7030:7036" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="7099:7110" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="7137:7143" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="7193:7204" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="7245:7251" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="7335:7416" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="7476:7487" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="7538:7544" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="7648:7749" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="7817:7891" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="8009:8124" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="8181:8192" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8240:8246" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="8344:8439" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="8473:8484" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8506:8512" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8560:8571" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8598:8604" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8638:8649" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8671:8677" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8725:8736" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8763:8769" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8807:8818" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8844:8850" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8906:8917" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="8952:8958" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="8996:9007" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9033:9039" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="9095:9106" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9141:9147" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="9199:9210" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9253:9259" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="9347:9432" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="9487:9498" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9544:9550" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="9644:9735" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="9778:9789" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9820:9826" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="9892:9903" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="9948:9954" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="10004:10015" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="10056:10062" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="10146:10227" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="10284:10295" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="10343:10349" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="10447:10542" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="10589:10600" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="10635:10641" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="10716:10785" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="10826:10837" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="10866:10872" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="10934:10945" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="10986:10992" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="11036:11047" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11079:11085" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="11153:11164" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11211:11217" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="11248:11259" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11278:11284" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="11326:11337" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11358:11364" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="11420:11431" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11478:11484" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="11580:11673" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="11729:11740" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="11784:11790" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="11883:11970" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="12023:12034" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="12078:12084" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="12174:12261" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="12323:12334" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="12387:12393" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="12501:12606" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="12662:12673" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="12720:12726" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="12822:12915" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="12981:13053" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="13167:13278" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="13326:13337" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="13360:13366" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="13429:13440" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="13469:13475" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="13511:13522" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="13546:13552" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="13605:13616" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="13647:13653" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="13706:13717" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="13758:13764" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="13852:13933" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="13976:13987" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14018:14024" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14091:14102" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14147:14153" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14198:14209" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14242:14248" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="14320:14385" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="14422:14433" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14458:14464" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14519:14530" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14563:14569" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14606:14617" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14642:14648" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14703:14714" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14747:14753" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="14804:14815" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="14854:14860" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="14943:15020" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="15075:15086" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15116:15122" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="15200:15259" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="15305:15316" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15350:15356" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="15430:15497" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="15535:15546" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15572:15578" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="15635:15646" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15681:15687" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="15729:15740" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15770:15776" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="15840:15851" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15894:15900" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="15946:15957" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="15991:15997" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="16070:16137" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="16176:16187" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16214:16220" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16279:16290" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16327:16333" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16384:16395" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16434:16440" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="16524:16601" ph="{...}" />
+            <marker date="1511937698295" expanded="false" signature="16637:16648" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16672:16678" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16730:16741" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16772:16778" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16814:16825" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16849:16855" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16907:16918" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="16949:16955" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="16996:17007" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="17036:17042" ph=" }" />
+            <marker date="1511937698295" expanded="false" signature="17104:17115" ph=" { " />
+            <marker date="1511937698295" expanded="false" signature="17156:17162" ph=" }" />
+            <marker date="1511937698295" expanded="true" signature="17200:20427" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="20455:21759" ph="{...}" />
+            <marker date="1511937698295" expanded="true" signature="21790:24691" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="304" column="5" lean-forward="false" selection-start-line="304" selection-start-column="5" selection-end-line="304" selection-end-column="5" />
+          <folding>
+            <marker date="1511944425148" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1511944425148" expanded="false" signature="154:2199" ph="..." />
+            <marker date="1511944425148" expanded="true" signature="3370:4667" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="4734:4805" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="4880:5284" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="5372:5645" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="5710:5721" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="5751:5757" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="5826:5954" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="6005:6016" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="6041:6047" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="6124:6406" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="6474:6596" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="6651:6662" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="6693:6699" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="6817:7176" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="7299:7653" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="7744:8079" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="8213:8535" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="8674:8996" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="9103:9411" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="9514:9657" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="9765:9903" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="9979:10098" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="10210:10466" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="10583:10839" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="10924:11166" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="11301:11661" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="11801:12156" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="12264:12587" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="12738:13061" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="13217:13540" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="13664:13973" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="14074:14266" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="14372:14559" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="14633:14801" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="14937:15298" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="15439:15795" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="15904:16228" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="16316:16441" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="16534:16654" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="16715:16816" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="16924:17196" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="17309:17576" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="17657:17905" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="18083:18403" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="18586:18906" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="19057:19363" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="19562:19910" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="20114:20462" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="20634:20968" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="21094:21511" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="21658:22103" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="22285:22456" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="22643:22814" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="22969:23056" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="23216:24406" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="24518:25095" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="25182:25264" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="25339:25418" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="25512:25605" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="25705:25791" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="25856:25867" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="25896:25902" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="25988:26184" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="26025:26036" ph="{}" />
+            <marker date="1511944425148" expanded="true" signature="26125:26178" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="26287:27165" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="26421:26725" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="26820:27159" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="27260:31763" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="27375:27390" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="27420:27430" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="27513:27881" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="27967:31757" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="31838:34538" ph="{...}" />
+            <marker date="1511944425148" expanded="false" signature="31944:31959" ph=" { " />
+            <marker date="1511944425148" expanded="false" signature="31992:32002" ph=" }" />
+            <marker date="1511944425148" expanded="true" signature="32084:33789" ph="{...}" />
+            <marker date="1511944425148" expanded="true" signature="33888:34532" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/discovery/InstanceInfoReplicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/EurekaDiscoveryClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#4377#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/discovery/endpoint/EndpointUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="235" column="56" lean-forward="false" selection-start-line="235" selection-start-column="56" selection-end-line="235" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/http/RestTemplateEurekaHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="114" column="10" lean-forward="false" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/discovery/shared/transport/EurekaHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/discovery/DiscoveryClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="1262" column="44" lean-forward="false" selection-start-line="1255" selection-start-column="10" selection-end-line="1262" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0.jar!/com/netflix/eureka/resources/AbstractVIPResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <marker date="1511937747218" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1511937747218" expanded="false" signature="152:703" ph="..." />
+            <marker date="1511937747218" expanded="true" signature="989:1105" ph="{...}" />
+            <marker date="1511937747218" expanded="false" signature="1132:1143" ph=" { " />
+            <marker date="1511937747218" expanded="false" signature="1208:1214" ph=" }" />
+            <marker date="1511937747218" expanded="true" signature="1360:2225" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/AbstractVIPResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/InstancesResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/PeerReplicationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/SecureVIPResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/ServerInfoResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/StatusResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/VIPResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/CurrentRequestVersion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/DefaultServerCodecs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0-sources.jar!/com/netflix/eureka/resources/InstanceResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7137">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-server/1.4.0.RELEASE/spring-cloud-netflix-eureka-server-1.4.0.RELEASE.jar!/org/springframework/cloud/netflix/eureka/server/EurekaServerConfigBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511937576814" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1511937576814" expanded="false" signature="171:658" ph="..." />
+            <marker date="1511937576814" expanded="true" signature="877:919" ph="@{...}" />
+            <marker date="1511937576814" expanded="true" signature="4812:4933" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="4984:4995" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5030:5036" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5077:5088" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5113:5119" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5172:5183" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5220:5226" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5281:5292" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5331:5337" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5394:5405" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5446:5452" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5508:5519" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5559:5565" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="5637:5764" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="5826:5837" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5889:5895" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="5940:5951" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="5980:5986" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6033:6044" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6075:6081" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6119:6130" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6156:6162" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6199:6210" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6235:6241" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6294:6305" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6342:6348" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6411:6422" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6469:6475" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="6524:6694" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="6753:6764" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6816:6822" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6873:6884" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="6913:6919" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="6991:7002" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7043:7049" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7085:7096" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7120:7126" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7178:7189" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7220:7226" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7263:7274" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7299:7305" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7359:7370" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7403:7409" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7451:7462" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7495:7501" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7568:7579" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7628:7634" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="7681:7692" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="7730:7736" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="7814:7889" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="7947:7958" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="8007:8013" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="8113:8210" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="8257:8268" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="8303:8309" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="8385:8454" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="8502:8513" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="8549:8555" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="8632:8703" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="8757:8768" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="8813:8819" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="8911:9000" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="9053:9064" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="9108:9114" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="9204:9291" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="9339:9350" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="9389:9395" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="9475:9552" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="9611:9622" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="9672:9678" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="9780:9879" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="9926:9937" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="9975:9981" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="10059:10134" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="10180:10191" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="10228:10234" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="10310:10383" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="10426:10437" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="10471:10477" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="10547:10614" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="10660:10671" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="10708:10714" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="10790:10863" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="10916:10927" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="10971:10977" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="11067:11154" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="11212:11223" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="11272:11278" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="11378:11475" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="11527:11538" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="11580:11586" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="11673:11756" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="11810:11821" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="11865:11871" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="11962:12049" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="12097:12108" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12146:12152" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="12231:12306" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="12345:12356" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12386:12392" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="12453:12464" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12507:12513" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="12555:12566" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12598:12604" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="12670:12681" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12728:12734" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="12780:12791" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="12827:12833" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="12908:12979" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="13038:13049" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="13098:13104" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="13205:13302" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="13354:13365" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="13407:13413" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="13500:13583" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="13632:13643" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="13680:13686" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="13766:13839" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="13876:13887" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="13912:13918" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="13973:13984" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="14017:14023" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="14092:14166" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="14285:14400" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="14452:14463" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="14506:14512" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="14600:14685" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="14737:14748" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="14791:14797" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="14885:14970" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="15026:15037" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="15084:15090" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="15186:15279" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="15328:15339" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="15376:15382" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="15462:15535" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="15576:15587" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="15619:15625" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="15690:15701" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="15748:15754" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="15800:15811" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="15847:15853" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="15928:15999" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="16053:16064" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="16109:16115" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="16207:16296" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="16363:16435" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="16550:16661" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="16711:16722" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="16763:16769" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="16853:16934" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="16984:16995" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="17036:17042" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="17126:17207" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="17250:17261" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="17295:17301" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="17371:17438" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="17489:17500" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="17539:17545" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="17629:17706" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="17759:17770" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="17811:17817" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="17905:17986" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="18036:18047" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="18088:18094" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="18178:18259" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="18306:18317" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="18355:18361" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="18439:18514" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="18564:18575" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="18616:18622" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="18706:18787" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="18844:18855" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="18903:18909" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="19007:19102" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="19164:19175" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="19228:19234" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="19342:19447" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="19499:19510" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="19550:19556" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="19642:19721" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="19783:19794" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="19831:19837" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="19929:20002" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="20045:20056" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="20085:20091" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="20155:20166" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="20207:20213" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="20280:20291" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="20328:20334" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="20431:20504" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="20559:20570" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="20616:20622" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="20716:20807" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="20860:20871" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="20915:20921" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="21011:21098" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="21145:21156" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="21191:21197" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="21272:21341" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="21396:21407" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="21450:21456" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="21547:21632" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="21696:21707" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="21759:21765" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="21875:21978" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="22019:22030" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22059:22065" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="22128:22139" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22180:22186" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="22229:22240" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22271:22277" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="22344:22355" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22400:22406" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="22465:22476" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22523:22529" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="22629:22722" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="22780:22791" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="22832:22838" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="22930:23011" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="23053:23064" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="23097:23103" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="23170:23181" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="23230:23236" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="23293:23304" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="23352:23358" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="23456:23551" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="23604:23615" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="23659:23665" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="23755:23842" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="23885:23896" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="23927:23933" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="24000:24011" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24056:24062" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="24116:24127" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24169:24175" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="24264:24347" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="24406:24417" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24464:24470" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="24570:24663" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="24719:24730" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24765:24771" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="24825:24836" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24869:24875" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="24921:24932" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="24969:24975" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="25051:25124" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="25175:25186" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25228:25234" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="25320:25403" ph="{...}" />
+            <marker date="1511937576814" expanded="false" signature="25442:25453" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25482:25488" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="25548:25559" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25600:25606" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="25658:25669" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25697:25703" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="25775:25786" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25825:25831" ph=" }" />
+            <marker date="1511937576814" expanded="false" signature="25892:25903" ph=" { " />
+            <marker date="1511937576814" expanded="false" signature="25955:25961" ph=" }" />
+            <marker date="1511937576814" expanded="true" signature="26067:26170" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="26208:31813" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="31841:34323" ph="{...}" />
+            <marker date="1511937576814" expanded="true" signature="34354:39572" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-server/1.4.0.RELEASE/spring-cloud-netflix-eureka-server-1.4.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/server/EurekaServerConfigBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1022">
+          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0-sources.jar!/com/netflix/appinfo/InstanceInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2958">
+          <caret line="183" column="53" lean-forward="true" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#46726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summery.fxb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="95" column="95" lean-forward="false" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41379312" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41379312" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>eureka-server2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33433735" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41379312" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41379312" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

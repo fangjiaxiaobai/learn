@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chapter1-total_introduction/chapter1-total_introduction.iml" filepath="$PROJECT_DIR$/chapter1-total_introduction/chapter1-total_introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter2-springbootlearn/chapter2-springbootlearn.iml" filepath="$PROJECT_DIR$/chapter2-springbootlearn/chapter2-springbootlearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo3_Frombook-MicroServiceRealBattle.iml" filepath="$PROJECT_DIR$/demo3_Frombook-MicroServiceRealBattle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/eureka-client2.iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/eureka-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server (1) (com.fxb.eureka).iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server (1) (com.fxb.eureka).iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/eureka-server2.iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/eureka-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/load-balance-ribbon.iml" filepath="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/load-balance-ribbon.iml" />
+    </modules>
+  </component>
+</project>

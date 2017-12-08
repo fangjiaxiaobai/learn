@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chapter2-springbootlearn" />
+        <module name="chapter3-spring-cloud-eureka" />
+        <module name="eureka-client" />
+        <module name="eureka-client2" />
+        <module name="eureka-server" />
+        <module name="eureka-server (1) (com.fxb.eureka)" />
+        <module name="eureka-server2" />
+        <module name="load-balance-ribbon" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chapter2-springbootlearn" target="1.8" />
+      <module name="chapter3-spring-cloud-eureka" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-client2" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="eureka-server (1) (com.fxb.eureka)" target="1.8" />
+      <module name="eureka-server2" target="1.8" />
+      <module name="load-balance-ribbon" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
