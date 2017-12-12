@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaBasicKnowledge.iml" filepath="$PROJECT_DIR$/JavaBasicKnowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" filepath="$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" />
       <module fileurl="file://$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" filepath="$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/source-code/source-code.iml" filepath="$PROJECT_DIR$/source-code/source-code.iml" />
     </modules>
