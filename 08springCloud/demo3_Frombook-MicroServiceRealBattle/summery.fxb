@@ -94,9 +94,71 @@ chapter3：
             XStream是用来将对象序列化成XML或者反序列化为对象的一个JAVA类库。
 
                                                                             2017-12-08 方小白,畅游大厦
+spring Cloud Ribbon 客户端负载均衡：
+    源码分析：
+        LoadBalancerClient: 接口。
+        其所在的包下\org\springframework\cloud\client\loadbalancer。
+        其中：LoadBalancerAutoConfiguration为实现客户端负载均衡器的自动化配置类。
+        查看LoadBalancerAutoConfiguration类头上的注解可以知道。Ribbon实现的负载均衡自动化配置需要满足下面的两个条件：
+            @ConditionalOnClass(RestTemplate.class) :RestTemplate类必须存在于当前的环境中。
+            @ConditionalOnBean(LoadBalancerClient.class)：在Spring的Bean工厂中必须有LoadBalancerClient的实现Bean
+        在这个类中主要做了下面三件事：
+            1.创建了LoadBalancerInterceptor的Bean，用于实现对客户端发起请求时进行拦截，以实现客户端负载均衡。
+            2.创建了RestTemplateCustomizer的Bean，用于给RestTemplate增加LoadBalancerInterceptor拦截器。
+            3.维护了RestTemplate的对象列表，并在这里进行初始化，通过调用RestTemplateCustomizer的实例来给需要客户端负载
+            均衡的RestTEmpate增加LoadBalancerInterceptor拦截器。
+
+        当一个被LoadBalaced注解修饰的RestTemplate注解修饰的RestTemplate对象向外发起Http请求时，会被LoadBalancerInterceptor类
+    的intercept函数所拦截。（在LoadBalancerInterceptor.java中）。由于在调用RestTemplate时，采用了服务名作为host，所以直接
+    从HttpRequest的URI对象中通过发送getHost()，就可以拿到服务名，然后调用execute函数去根据服务名来选择实例发起实际的请求。
+        查看execute源码，发现在RibbonLoadBalancerClient.java中，对loadBalancer.execute(,)进行了实现。
+        首先：根据传入的服务名serviceId通过getServer去获得具体的服务实例。
+            注：在进行choose的时候，并不是调用的自己的choose，而是com.netflix.loadbalancer.ILoadBalancer.chooserServer();
+           这个接口定义了一个客户端负载均衡器需要的一系列抽象操作。
+            对ILoadBalacer接口，BaseLoadBalancer类，实现了基础的负载均衡，而DynamicServerListLoadBalancer和ZoneAwareLoadBalancer
+            在负载均衡的策略上做了扩展。
+        然后：将其封装成RibbonServer对象，回调LoadBalancerInterceptor请求拦截器中LoadBalancerRequest的apply(final SerivceInstance instance)函数
+        向一个实际的具体服务实例发起请求，从而实现host:port形式的实际访问地址的转换。
+            在apply函数的实现过程中，封装了ServiceRequestWrapper对象。ServiceRequestWrapper重写了getURI函数。
+            重写后的getURI函数，通过调用LoadBalancerClient接口的reconstructURI函数来重新构建一个URI来访问。
+            具体的转换过程在RibbonLoadBalancerClient.reconstructURI()中。
+            其中RibbonLoadBalancerContext类是LoadBalancerContext的子类，该类用于存储一些被均衡器使用的上下文内容和API操作。
+        这个部分主要写了：springCloud 是如何通过LoadBalancerInterceptor拦截器对RestTemplate的请求进行拦截，并利用SpringCloud
+        的负载均衡器LoadBalancerClient将以逻辑服务名为host的URI转换成具体的服务实例地址的过程。同时通过分析LoadBalancerClient
+        的Ribbon实现RibbonLoadBalancerClient，可以知道在使用Ribbon负载均衡器的时候，实际使用的还是Ribbon定义的ILoaderBalancer接口的实现
+        自动化配置会采用ZoneAwareLoadBalancer的实例来实现客户端负载均衡。
 
 
+    负载均衡器：ILoadBalancer的体系结构。
+        SpringCloud定义了LoadBalancerClient作为负载均衡器的通用接口，并且针对Ribbon实现了RibbonLoadBalancerClient，但是
+        在具体实现客户端负载均衡的时候，是通过Ribbon的ILoadBalancer接口实现的。
+        首先看一个ILoadBalancer接口的抽象实现-AbstractLoadBalancer。
+        BaseLoadBalancer是Ribbon负载均衡的基础实现类，在该类中定义了很多关乎负载均衡相关的基础内容。
+        两个维护存储服务实例的Server对象的列表。
+            @Monitor(name = PREFIX + "AllServerList", type = DataSourceType.INFORMATIONAL)
+            protected volatile List<Server> allServerList = Collections.synchronizedList(new ArrayList<Server>());
+            @Monitor(name = PREFIX + "UpServerList", type = DataSourceType.INFORMATIONAL)
+            protected volatile List<Server> upServerList = Collections.synchronizedList(new ArrayList<Server>());
+        用来存储负载均衡器各服务实例舒心个统计信息的LoadBalancerStats对象。
+            protected LoadBalancerStats lbStats;
+        定义了检查服务实例是否正常服务的IPing对象，在BaseLoadBalancer中默认为null，需要在构造时注入它的具体实例。
+            protected IPing ping = null;
+        定义了检查服务实例操作的执行策略对象IPingStrategy
+            protected IPingStrategy pingStrategy = DEFAULT_PING_STRATEGY;
+        定义了负载均衡的处理规则IRule对象。 默认使用RoundRobinRule实现最基本且常用的线性负载均衡规则。
 
+        启动ping任务：在BaseLoadBalancer的默认构造函数中，会直接启动一个用于检查Server是否健康的任务。该任务默认的执行间隔是10秒。
+
+        实现了ILoadBalancer接口定义的负载均衡器,都有以下功能：
+            addServers()  : 添加服务
+            chooseServer() ： 挑选一个具体的服务实例
+            markServerDown() ： 标志某个服务暂停服务。
+            getReachableServers()： 获取可用的服务列表
+            getAllServers() ： 获取所有的服务实例列表。
+
+    DynamicServerListLoadBalancer:
+        在BasicLoadBalancer的基础上，实现了服务实例清单在运行期的动态更新能力。还具备对服务实例清单的过滤功能。
+        也就是说可以通过过滤器来选择性的获取一批服务实例清单。
 
 
 
