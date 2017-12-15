@@ -247,7 +247,7 @@ spring Cloud Ribbon 客户端负载均衡：
                 ribbon.eureka.enabled=false
 
     重试机制：
-
+        默认为关闭，spring.cloud.loadbalancer.retry.enabled=true，默认为false、
 
 
 
