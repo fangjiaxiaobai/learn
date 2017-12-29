@@ -250,6 +250,35 @@ spring Cloud Ribbon 客户端负载均衡：
         默认为关闭，spring.cloud.loadbalancer.retry.enabled=true，默认为false、
 
 
+5. 服务容错保护机制：
+    HyStrix的运行原理
+    工作流程。
+    还有断路器原理：
+
+    使用详解：
+        HyStrix命令就是HyStrixCommand。它用来封装具体的依赖服务调用逻辑。
+    创建请求命令：
+        1.通过继承UserCommand的方式来实现。
+        2.使用@HyStrixCommand注解的方式来实现。
+        3.将HyStrixCommand通过Observable来实现响应式执行方式。通过调用observe和toObserverable()
+        方法可以返回Observable对象。
+        但是这两种方式返回的Observable对象有所不同：
+            observe()返回的是Hot Observable，该命令会在observe()调用时候立即执行.当Observable每次订阅的时候
+        会重放它的行为，。
+            toOberve() 返回的是Cold Observable,不会立即执行，只有当所有的订阅者都订阅它之后才会执行。
+
+//////////////////////****************************************************/
+2017-12-25   请求合并
+    在高并发的情况下，通信次数的增加，总的通信时间消耗会将变得不那么理想。同时，因为服务依赖的线程池资源有限
+将出现排队等待与响应延迟的情况。为了优化这两问题，HyStrix提供了HyStrixCollapser来实现请求的合并，减少通信
+消耗和线程总数的占用。
+    HystrixCollapser实现了在HystrixCommand之前放置一个合并处理器，将处于很短的时间窗内对同一个依赖服务的
+多个请求进行整合并以批量方式发起请求的功能(服务方也需要提供响应的批量实现接口)。通过HystrixCollapser的封装
+开发者不需要关注线程合并的细节过程，只需要关注批量化服务和处理。
+
+
+
+
 
 
 

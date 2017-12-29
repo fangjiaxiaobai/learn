@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/CallableFutureFutureTask/CallableFutureFutureTask.iml" filepath="$PROJECT_DIR$/CallableFutureFutureTask/CallableFutureFutureTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter1-baseKnowledge/chapter1-baseKnowledge.iml" filepath="$PROJECT_DIR$/chapter1-baseKnowledge/chapter1-baseKnowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/fxb-Learn-Concurrency.iml" filepath="$PROJECT_DIR$/fxb-Learn-Concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
     </modules>
   </component>
 </project>

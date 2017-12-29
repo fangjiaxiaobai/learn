@@ -8,6 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="chapter2-springbootlearn" />
         <module name="chapter3-spring-cloud-eureka" />
+        <module name="chapter5-hystrix" />
+        <module name="chapter6-feign" />
+        <module name="chapter7-zuul" />
+        <module name="common-hello-server" />
+        <module name="common-hello-service" />
+        <module name="common-hello-service2" />
         <module name="eureka-client" />
         <module name="eureka-client2" />
         <module name="eureka-server" />
@@ -19,6 +25,12 @@
     <bytecodeTargetLevel>
       <module name="chapter2-springbootlearn" target="1.8" />
       <module name="chapter3-spring-cloud-eureka" target="1.8" />
+      <module name="chapter5-hystrix" target="1.8" />
+      <module name="chapter6-feign" target="1.8" />
+      <module name="chapter7-zuul" target="1.8" />
+      <module name="common-hello-server" target="1.8" />
+      <module name="common-hello-service" target="1.8" />
+      <module name="common-hello-service2" target="1.8" />
       <module name="eureka-client" target="1.8" />
       <module name="eureka-client2" target="1.8" />
       <module name="eureka-server" target="1.8" />

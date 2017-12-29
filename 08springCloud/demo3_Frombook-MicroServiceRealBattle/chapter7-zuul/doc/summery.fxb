@@ -1,0 +1,172 @@
+ZUUL  网关服务、
+    环境搭建：
+        使用注解：@EnableZuulServer;
+        重要的是application.properties文件中：
+            根据服务名配置路由地址：
+                zuul.routes.wxy=/wxy/**
+                zuul.routes.wxy.serviceId=Hello-Service
+    请求过滤：
+        这种简单的搭建环境，无法实现控制权限这样的功能：所有请求都会毫无保留的转发到具体的应用上并返回结果。
+    最好的解决办法就是：在请求到达网关的时候就进行检验和过滤，而不是转发后在过滤。
+    同时，通过在网关中完成检验和过滤，微服务应用端就可以去除各种复杂的过滤器或者拦截器了。这使得微服务应用接口的
+    开发和测试的复杂程度度也得到了响应的降低。
+        Zuul允许开发者在API网关上通过定义过滤器来实现队对；请求的拦截和过滤，实现的方法非常简单，我们只需要
+    继承zuulFilter抽象类并实现它定义的4个抽象函数就可以完成对请求的拦截和过滤了。
+        创建完毕ZuulFilter的实现类（AccessFilter）之后，还要提供给容器。@Bean
+
+    至此：
+        zuul作为系统的统一入口，屏蔽了系统内部的各个微服务的细节。
+        与服务治理框架结合，实现自动化的服务实例维护以及负载均衡的路由转发。
+        它可以实现接口权限校验与微服务业务逻辑的解耦。
+        通过服务网关中的过滤器，在各生命周期中去校验请求的内容，将原本在对外服务层做的校验前移，保证了微服务的无状态性。
+        同时降低了微服务的测试难度。让服务本身更集中的关注业务逻辑。
+    路由详解：
+        讲的就是如何在application.properties文件中如何配置路由规则。
+        传统的路由配置
+        服务器默认的路由规则：
+            Eureka在默认情况下，都会被zuul自动地创建映射关系来进行路由，这样就会使我们不想被外界访问到的服务也会被访问到。
+        我们可以使用zuul.ignored-services参数来配置一个服务名匹配表达式来定义不自动创建路由的规则。
+            比如：zuul.ignored-services=* 这样代表对所有的服务都不自动创建路由。
+        自定义路由映射规则：
+            如果我们的各个微服务应用都遵循类似userservice-v1这样的命名规则，要实现类似userservice/v1/
+        或者v1/userservice/**的路由规则就会很简单。
+            public PatternServiceRouteMapper serverRouteMapper(){
+                return new PatternServiceRouteMapper{
+                   "(?<name>^.+)-(?<version>v.+$)","${version}/{name}");
+                }
+            }
+        PatternServiceRouteMapper对象可以让开发者通过正则表达式来自定义服务与路由映射的生成关系。
+
+        本地跳转：
+            zuul.routes.api-a.path=/api-a/**
+            zuul.routes.api-a.uri=forward:/local
+
+    Cookie与头信息：
+        默认情况下，Zuul在请求路由时，会过滤掉HTTP请求头信息中的一些敏感信息，防止它们被传递到下游的外部服务器。
+    默认的敏感头信息通过zuul.sensitiveHeaders参数定义，包括Cookie，Set-Cookie,Authorization三个属性。这个时候，
+    如果我们是使用了Security或者shiro框架搭建的webApp就无法实现登录或者鉴权。
+        解决办法：
+            1. 通过设置全局参数为空来覆盖默认值。
+            zuul.sensitiveHeaders=
+            2. 通过指定路由的参数来配置
+             2.1 方法一：对指定路由开启自定义敏感头
+                zuul.routes.<router>.customSensitiveHeaders=true
+             2.2 方法二：指定路由的敏感头设置为空
+                zuul.toutes.<router>.sensitiveHeaders=
+                比较推荐这两种方式。
+    重定向问题：
+        cookie的问题解决了，但是通过框架登录成功后，跳转到登录后的页面的时候，此时的登录后的请求结果状态码为302，请求响应
+        头信息中的location指向了具体的服务实例地址。怎么解决这个问题呢？
+        进行如下配置：
+            zuul.addHostHeader=true
+            仅限Camden版本。
+
+Hystrix和Ribbon支持：
+    Zuul天生就有线程隔离和断路器的自我保护功能，以及对服务调用的客户端负载功能。但是要注意，使用path与url的映射关系来配置
+ 路由规则的时候，对于路由转发的请求不会采用HystrixCommand来包装，所以这类路由请求没有线程隔离和断路器的保护，也不会有负载均衡的能力
+ 所以我们尽量使用path和serviceId的配置方式。
+    在使用zuul搭建API网关的时候，可以通过Hystrix和Ribbon的参数来调整路由请求的各种超时时间等配置。
+        1.设置API网关中路由转发请求的HystrixCommand执行超时时间
+            hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000
+        2.该参数用来设置路由转发请求的时候，创建请求连接的超时时间
+            ribbon.ConnectTimeout=
+           如果ribbon.ConnectTimeout的值大于hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds的值
+           的时候，由于路由转发的请求命令已经超时，所以不会重试路由请求，而是直接按请求命令超时处理。
+           反之，就会重试路由请求。
+        3.设置路由转发请求的超时时间
+            ribbon.readTimeout=
+        4.关闭上面提及的重试
+            zuul.retryable=false  //关闭全局重试机制
+            zuul.routes.<route>.retryable=false  // 指定路由关闭重试机制
+
+Zuul过滤器：
+    Zuul的路由功能是由几个不同的过滤器完成的。其中，
+        路由映射主要通过pre类型的过滤器完成，它将请求路径与配置的路由规则进行匹配，对pre类型过滤器获得的路由地址进行转发。
+        请求转发的部分是通过route类型过滤器来实现的。
+    zuul中的过滤器必须包含4个基本特征：过滤类型，执行顺序，执行条件，具体操作。
+    filterType: 该函数需要返回一个字符串来代表过滤的类型，这个类型就是Http请求过程中定义的各个阶段。
+        pre：可以在请求被路由之前调用。
+        routing：在路由请求时被调用。
+        post：在routing和error过滤之后被调用
+        error：处理请求是发生错误时被调用。
+    filterOrder：通过int值来定义过滤器的执行顺序，数值越小，优先级越高。
+    shouldFilter：过滤器是否要执行。
+    run：过滤器的具体逻辑。
+
+    这个过滤器执行的过程：
+        当外部HTTP请求进入API网关的时候，首先会进入第一个阶段的pre，进行处理，主要是前置加工，如请求的校验。
+        然后，进入第二个阶段routing，请求转发阶段，请求将会被routing类型过滤器处理。将外部请求转发到具体服务实例上去。
+        当时实例服务把请求结果都返回之后，routing阶段完成。
+        请求进入第三阶段post，此时请求将会被post类型的过滤器处理，这些过滤器在处理的时候不仅可以获取对处理结果进行一些加工
+        或转换等内容，另外，还有一个特殊的过滤器error，这个过滤器在上述阶段发生异常的时候才会触发。
+        但是它最后还是会流向post过滤器。通过post流向客户端。
+    核心过滤器-详解：
+        pre过滤器：
+            1.ServletDetectionFilter：执行顺序是-3，是最先被执行的过滤器。
+            主要用来检测当前请求是通过Spring的DispatcherServlet处理运行的，还是通过ZuulServlet来处理运行的。
+            它的检测结果会议布尔类型保存在当前请求上下文的isDispatcherServletRequest参数中，这样在后续的过滤器中，
+            我们就可以通过RequestUtils.isServletRequest()方法来判断请求处理的源头，以实现不同的处理机制。
+        一般情况下，外部的请求会被Spring的Dispatcher处理，除了通过/zuul/*路径访问的请求会绕过DispatcherServlet，被
+        zuulServlet处理，主要用来处理大文件上传的情况。另外/zuul/*这个路径可以通过zuul.servletPath参数来进行修改。
+            2.Servlet30WrapperFilter: 它的执行顺序为-2，是第二次执行的过滤器。
+        目前的实现都会所有请求生效，主要为了将原始的HttpServletRequest包装成Servlet30RequestWrapper对象。
+            3.FormBodyWrapperFilter:它的执行顺序为-1，是第三个执行的过滤器。该过滤器仅对两类请求生效：
+        第一类是Content-type为application/x-www-form-urlencoded的请求，第二类是Content-Type为multipart/form-data
+        并且是由spring的DispatcherServlet处理的请求（用到了ServletDetectionFilter的处理结果）。
+        该过滤器的主要目的是将符合要求的请求体包装成FormBodyRequestWrapper对象。
+            4.DebugFilter：它的执行顺序为1，是第四个执行的过滤器。
+        该过滤器会根据配置参数zuul.debug.rquest和请求中的debug参数来决定是否执行过滤器中的操作。
+        它具体操作的内容则是将当前请求上下文的debugRouting和debugRequest参数设置为true。
+            5.PreDecorationFilter: 它的执行顺序是5.是pre阶段最后被执行的过滤器。
+        该过滤器会判断当前请求上下文中是否存在forward.to和serviceId参数，如果不存在，那么它就会执行具体的过滤器的操作。
+        如果有一个存在的话，说明当前的请求已经被处理过了，因为这两个消息就是根据当前请求的路由信息加载进来的。
+        它具体操作的内容就是为当前请求做一些预处理，。
+    route过滤器：
+        RibbonRoutingFilter:它的执行顺序为10，是route阶段第一个执行的过滤器。该过滤器只对请求上下文中存在serviceId
+    参数的请求进行处理，即只对通过ServiceId配置路由规则的请求生效。而该过滤器的执行逻辑就是面向服务路由的核心，
+    他通过Ribbon和Hystrix来面向实例发起请求，并将服务实例的请求结果返回。
+        SimpleHostRoutingFilter：它的执行顺序为100，是route阶段第二个执行的过滤器。该过滤器只对请求中存在routeHost参数
+    的请求进行过滤,即只对通过url配置路由规则的请求生效，而该过滤器的执行逻辑是直接想routeHost参数的屋里地址发起请求。
+    源码中是通过httpClient实现的，这类请求没有线程隔离和断路器的保护。
+        SendForwardFilter:它的执行顺序为500，是route阶段第三个执行的过滤器，该过滤器只对请求上下文中存在forward.to参数的
+    请求进行处理，即用来处理路由规则中的forward的本地跳转。
+    Post过滤器：
+        SendErrorFilter：执行顺序为0，是post阶段第一个执行的过滤器。
+    该过滤器仅在请求上下文中包含error.status_code参数并且还没有被该过滤器处理过的时候执行。具体逻辑就是利用请求上下文中的
+    错误信息组成一个forward到API网关/error错误端点的请求来产生错误响应。
+        SendResponseFilter:它的执行顺序是100，是post阶段第二个执行的过滤器。
+    该过滤器会减产请求上下文中是否包含请求响应相关的头信息，响应数据或者是响应体，只有在包含他们其中一个的时候请执行处理逻辑。
+    而该过滤器的处理逻辑就是利用请求上下文的响应信息来组织需要发送会客户端的响应内容。
+
+异常处理：
+    在route类型的过滤器中，对请求的处理逻辑都进行了try-catch处理。在catch没有进行任何输出操作，而是在请求上下文中添加
+了一些error相关的参数。
+    error.status_code:错误编码。
+    error.exception:Exception异常对象
+    error.message: 错误信息。
+怎么判断引起异常的过滤器来自什么阶段呢?
+    那么查看一下Zuul过滤器的核心处理器：com.netflix.zuul.FilterProcessor.该类定义了下面列出的过滤器调用和处理相关的核心方法
+
+    *****看不进去了。。。
+
+禁用过滤器：
+    如果我们有时候不想用某些过滤器了，想要禁用它们该怎么做呢？
+    zuul提供了一个参数来禁用指定的过滤器。该参数配置格式如下：
+        zuul.<SimpleClassName>.<filterType>.disable=true;
+        <simpleClassName>:过滤器的类名
+        <filterType>:过滤器的类型
+动态加载：
+    动态路由：
+    动态过滤器
+
+
+
+
+
+
+
+
+
+
+
+
