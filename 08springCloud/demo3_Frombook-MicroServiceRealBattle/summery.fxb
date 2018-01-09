@@ -95,7 +95,7 @@ chapter3：
 
                                                                             2017-12-08 方小白,畅游大厦
 spring Cloud Ribbon 客户端负载均衡：
-    源码分析：
+    a.源码分析：
         LoadBalancerClient: 接口。
         其所在的包下\org\springframework\cloud\client\loadbalancer。
         其中：LoadBalancerAutoConfiguration为实现客户端负载均衡器的自动化配置类。
@@ -130,7 +130,7 @@ spring Cloud Ribbon 客户端负载均衡：
 
 
     负载均衡器：ILoadBalancer的体系结构。
-        SpringCloud定义了LoadBalancerClient作为负载均衡器的通用接口，并且针对Ribbon实现了RibbonLoadBalancerClient，但是
+        SpringCloud定义了LoadBalancerClient作为负载均衡器的通用接口，并且针对Ribbon做了实现RibbonLoadBalancerClient，但是
         在具体实现客户端负载均衡的时候，是通过Ribbon的ILoadBalancer接口实现的。
         首先看一个ILoadBalancer接口的抽象实现-AbstractLoadBalancer。
         BaseLoadBalancer是Ribbon负载均衡的基础实现类，在该类中定义了很多关乎负载均衡相关的基础内容。
@@ -139,7 +139,7 @@ spring Cloud Ribbon 客户端负载均衡：
             protected volatile List<Server> allServerList = Collections.synchronizedList(new ArrayList<Server>());
             @Monitor(name = PREFIX + "UpServerList", type = DataSourceType.INFORMATIONAL)
             protected volatile List<Server> upServerList = Collections.synchronizedList(new ArrayList<Server>());
-        用来存储负载均衡器各服务实例舒心个统计信息的LoadBalancerStats对象。
+        用来存储负载均衡器各服务实例服务统计信息的LoadBalancerStats对象。
             protected LoadBalancerStats lbStats;
         定义了检查服务实例是否正常服务的IPing对象，在BaseLoadBalancer中默认为null，需要在构造时注入它的具体实例。
             protected IPing ping = null;
@@ -159,6 +159,124 @@ spring Cloud Ribbon 客户端负载均衡：
     DynamicServerListLoadBalancer:
         在BasicLoadBalancer的基础上，实现了服务实例清单在运行期的动态更新能力。还具备对服务实例清单的过滤功能。
         也就是说可以通过过滤器来选择性的获取一批服务实例清单。
+        成员变量中，新增了一个关于服务列表的操作对象ServerList<T> serverListImpl.
+        在ServerList接口中：定义了两个抽象方法：
+            getInitialListOfServers() 用于获取初始化的服务实例清单。
+            getUpdatedListOfServers()：用于获取更新的服务实例清单。
+
+        因为DynamicServerListLoadBalancer可以实现服务实例的动态更新，那么势必需要Ribbon具备访问Eureka来获取
+        实例的是能力(1.ServerList)，所以在org.springframework.cloud.netflix.ribbon.eureka包下可以找到EurekaRibbonClient-
+        Configuration这个配置类，在ribbonServerList方法中，创建并返回了一个DomainExtractingServerList对象，
+        这个类对getInitialListOfServers和getUpdatedListOfServers做了实现：调用了类中的ServerList<DiscoveryEnabledServer> list
+        成员，这个成员是在EurekaRibbonClientConfiguration调用DomainExtractingServerList实例传入的DiscoveryEnabledNIWSServerList
+        对象。看DiscoveryEnabledNIWSServerList类中：发现都是调用了obtainServersViaDiscovery方法。
+            这个方法通过EurekaClient从服务注册中心获取到具体的服务实例InstanceInfo列表，对这写服务实例进行遍历，
+            将状态设置为UP的实例转换成DiscoveryEnableServer对象，最后将这些对象组成List返回。
+        将List返回到DomainExtratingServerList.java中的getUpdatedListOfServers或者getInitialListOfServers方法，
+        继续通过setZones函数进行处理。见setZones函数：将以上返回的List转换成内容不定义的DiscoveryEableServer的子类
+        对象DomainExtractingServer，为服务实例对象设置一写必要的属性。
+        2.ServerListUpdater:  这个对象实现的是对ServerList的更新(服务更新器)
+             ServerListUpdater的两个实现类：
+                PollingServerListUpdater：动态服务列表更新的默认策略。DynamicServerListLoadBalancer负载均衡器中的默认实现。
+                    通过定时任务的方式进行服务列表的更新。
+                    start函数：先创建了一个Runnable的线程实现，在该实现中调用了上面提到的具体更新服务实例列表的方法updateAction.doUpdate().
+                    最后，为这个Runnable线程实现了启动了一个定时任务来执行。
+                EurekaNotificationServerListUpdater：该更新也可服务于DynamicServerListLoadBalancer负载均衡器。需要利用Eureka
+                    的事件监听器来驱动服务列表的更新操作。
+
+        3. ServerListFilter
+            通过查看ServerListFilter的关系图可以知道：
+                AbstractServerListFilter：抽象过滤器。定义了LoadBalancerStats、
+                    ZOnePreferenceServerListFilter:基于区域感知的方式实现了服务实例的过滤。
+                     根据提供服务的实例所处的区域与消费者自身所处的区域进行比较。过滤掉不是同处一个区域的实例。
+    ZoneAwareLoadBalancer 负载均衡器是对DynamicServerListLoadBalancer的扩展。
+        解决了DynamicServerListLoadBalancer的跨区域高延迟的问题。
+
+    负载均衡策略：IRule的实现体系。
+        AbstractLoadBalancerRule:抽象类.
+            定义了负载均衡器ILoadBalancer对象，能够在具体实现服务策略的时候，获取一下负载均衡器中维护的信息来作为分配依据。
+        并设计了一些算法来实现对特定场景的高效策略。
+            RandomRule: 从服务实例清单中随机选择一个服务实例的功能。
+            RoundRobinRule: 实现了按照线性轮询的方式一次选择每个服务实例的功能。
+                线性轮询是通过AtomicInteger类的对象来实现的。
+            RetryRule：具备重试机制的实例选择功能。
+                在内部定义了一个IRule对象。默认使用RoundRobinRule实例。在choose内实现了内RoundRobinRule的策略进行重试的策略。
+            WeightedResponseTimeRule: 对RoundRobinRule的扩展。增加了根据实例的运行情况来计算权重，并根据权重来挑选实例。
+                三个核心内容：
+                A.定时任务：类在初始化的时候，会通过serverWeightTimer.schedule(new DynamicServerWeightTask(), 0,
+                    serverWeightTaskTimerInterval);启动一个定时任务，用来为每个服务实例计算权重。默认为30秒。
+                B.权重计算：存储权重的对象List<Double> accumulatedWeights;该LIST中的每个权重值所处的位置对应了负载均衡
+                    维护的服务实例清单中所有实例在清单中的位置。
+                    维护实例权重的计算过程通过maintainWeights函数实现。
+                        这个函数里实现了一中算法。看代码。
+                C.实例选择。
+                    choose方法。
+                在整个大区间中随机选取一个数，这个数在哪个区间就调用这个区间对应的实例。
+            ClientConfigEnabledRoundRobinRule：
+                 BestAvailableRule,继承了ClientConfigEnabledRoundRobinRule，在实现总注入了负载均衡的统计对象LoadBalancerStats
+                    同时具体的choose算法中利用LoadBalancerStats保存的实例统计信息来选择满足要求的实例。
+                    它会通过遍历负载均衡器中维护的所有服务实例，回过滤掉故障的实例，找出并发请求书最小的一个，所以该策略的特性是
+                    可选出最空闲的实例。
+                 PredicateBasedRule:基于Predicate实现的策略、Predicate是Google Guava Collection工具对集合进行过滤的条件接口。
+                       从子类实现的Predicate逻辑过滤一部分服务实例，然后再以轮询的方式从过滤后的实例清单中选出一个。
+                       AvailabilityFilteringRule: 继承了PredicateBasedRule，先过滤清单，再轮询选择。
+                            该策略通过线性抽样的方式直接尝试寻找可用且较空闲的实例来使用，优化了父类每次都要遍历所有实例的开销。
+                            过滤条件使用的AvailabilityPredicate：
+                            主要的过滤逻辑位于shouldSkipServer方法中。它主要判断服务实例的两项内容。
+                                是否故障，即断路器是否生效已断开。
+                                实例的并发请求数大于阈值。默认值为2^32-1.
+                                    可以通过<clientName>.<nameSpace>.ActiveConnectionLimit来修改。
+                       ZoneAvoidanceRule:
+    b.配置详解：
+        自动化配置：
+            camden版本的优化
+
+        参数配置(未与Eureka结合)：
+            全局配置:
+                ribbon.<key>=<value>: key：客户端配置的参数名，value对应参数的值。
+            指定客户端配置:
+                <clientName>.ribbon.<key>=<value>: <clientName>:客户端的名称 key：客户端配置的参数名，value对应参数的值。
+        参数配置(与Eureka结合)
+            这时ServerList的维护机制实现被com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList覆盖。
+                将服务清单列表交给Eureka的服务治理机制来进行维护。
+            IPing的实现将被com.netflix.niws.loadbalancer.NIWSDiscoveryPing的实例覆盖，将实例检查的任务交给了Eureka。
+
+            Spring Cloud Ribbon默认实现了区域亲和策略。可以用它通过Eureka实例的元数据配置来实现区域化的实例配置方案。
+                eureka.instance.metadataMap.zone=shanghai
+                #配置是否禁用Eureka对Ribbon服务实例的维护实现
+                ribbon.eureka.enabled=false
+
+    重试机制：
+        默认为关闭，spring.cloud.loadbalancer.retry.enabled=true，默认为false、
+
+
+5. 服务容错保护机制：
+    HyStrix的运行原理
+    工作流程。
+    还有断路器原理：
+
+    使用详解：
+        HyStrix命令就是HyStrixCommand。它用来封装具体的依赖服务调用逻辑。
+    创建请求命令：
+        1.通过继承UserCommand的方式来实现。
+        2.使用@HyStrixCommand注解的方式来实现。
+        3.将HyStrixCommand通过Observable来实现响应式执行方式。通过调用observe和toObserverable()
+        方法可以返回Observable对象。
+        但是这两种方式返回的Observable对象有所不同：
+            observe()返回的是Hot Observable，该命令会在observe()调用时候立即执行.当Observable每次订阅的时候
+        会重放它的行为，。
+            toOberve() 返回的是Cold Observable,不会立即执行，只有当所有的订阅者都订阅它之后才会执行。
+
+//////////////////////****************************************************/
+2017-12-25   请求合并
+    在高并发的情况下，通信次数的增加，总的通信时间消耗会将变得不那么理想。同时，因为服务依赖的线程池资源有限
+将出现排队等待与响应延迟的情况。为了优化这两问题，HyStrix提供了HyStrixCollapser来实现请求的合并，减少通信
+消耗和线程总数的占用。
+    HystrixCollapser实现了在HystrixCommand之前放置一个合并处理器，将处于很短的时间窗内对同一个依赖服务的
+多个请求进行整合并以批量方式发起请求的功能(服务方也需要提供响应的批量实现接口)。通过HystrixCollapser的封装
+开发者不需要关注线程合并的细节过程，只需要关注批量化服务和处理。
+
+
 
 
 

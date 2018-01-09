@@ -1,0 +1,93 @@
+声明式服务调用：
+    Spring cloud Feign : 基于NetFlix Feign 实现，整合了Spring Cloud Ribbon和Spring Cloud Hystrix,
+除了提供了这两者强大的功能之外还提供了一种声明式的Web服务客户端定义方式。
+    在Spring Cloud Feign的实现下，我们只需要创建一个接口并用注解的方式配置它，即可完成对服务提供方的接口绑定。
+简化了在使用Spring CLoud Ribbon时自动封装调用客户端的开发量。SpringCLoud Feign具备可插拔的注解支持。包括
+Feign注解和JAX-RS注解。同时在Netflix的基础上扩展了对SpringMVC的注解支持。
+
+    快速入门：
+    继承特性：
+        使用Spring Cloud Feign继承特性的有点很明显，可以讲接口的定义从Controller中剥离，
+        通过配合Maven私有仓库就可以轻易地实现接口定义的共享，实现在构建期的接口绑定，从而
+        有效减少服务客户端的绑定设置。
+        但是，这种情况下，一旦要修改了一个接口，那就会导致客户端工程的构建失败。
+    Ribbon配置：
+        Spring Cloud Feign的客户端负载均衡是通过Spring Cloud Ribbon来实现的、
+        如何在使用Spring Cloud Feign的工程中使用Ribbon的配置呢?
+        全局配置：
+            ribbon.<key>=<value>
+        指定服务配置：
+            <client>.ribbon.key=value
+           由于在Spring Cloud feign的初始化过程中，Feign会根据主机的name属性或者value属性指定服务名。
+           自动创建一个Ribbon的客户端。指定服务配置时候的<client>即使在注解里配置的name或者value属性值。
+
+    重试机制：
+        Feign实现默认的重试机制。
+        重试机制对构建狗可用的服务集群来说非常重要，而Spring cloud Feign也为其提供了足够的支持。
+    Hystrix
+        Feign默认情况下：会将所有Feign客户端的方法都封装到Hystrix命令中进行服务保护。
+        如何在使用Feign的同时配置Hystrix属性以及如何实现服务降级；
+        全局配置：使用前缀：hystrix.command.default.***
+            hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000
+            注：确认feign.hystrix.enabled参数没有被设置为false。否则会关闭feign客户端的Hystrix支持。
+            对于Hystrix的超时时间控制除了可以使用上面的配置来增加熔断超时时间，也可以通过feign.hystrix.enabled=false
+            来关闭hystrix功能。或者使用hystrix.command.default.execution.timeout.enabled=false来关闭熔断功能。
+    禁用Hystrix：
+        全局关闭Hystrix功能：feign.hystrix.enabled=false.
+        如果知识想针对某个服务客户端来关闭Hystrix支持，需要通过@Scope("prototype")注解为指定的客户端配置feign.Builder实例。
+        1.构建一个关闭HyStrix的配置类。
+        @Configuration
+        public class DisableHyStrixConfiguration{
+            @Bean
+            @Scope("prototype")
+            public Feign.Builder feignBuilder(){
+                return Feign.builder();
+            }
+        }
+
+        在对应的服务中：
+        @FeignClient(name="Hello-Service",configuration=DisableHystrixConfiguration.class)
+        public interface HelloService{
+            ....
+        }
+    指定命令配置：
+        更具不同的实际业务指定不同的配置方案：
+            采用hystrix.command.<commandKey>作为前缀。而<commandKey>默认情况下会采用Feign客户端中的方法名作为标识。
+            所以，尝试机制中对/hello接口的熔断超时时间的配置可以通过其方法名作为<commandKey>来进行配置：
+                hystrix.commadnd.hello.exection.isolation.thread.timeoutInMilliseconds=5000
+            注意：相同的方法名的问题。相同的方法名Hystrix会公用。
+    服务降级配置：
+        Feign将Hystrix的服务降级进行了封装，Feign提供了以中更加简单的方式来实现服务降级。
+        重写服务接口，使用@FeignClient(..,fallback=HelloServiceFallBack.class)来指定。
+
+其他配置：
+    请求压缩：
+        Feign支持对请求和响应进行GZIP压缩，以减少通信过程中的性能损耗。
+        feign.compression.request.enabled=true
+        feign.compression.response.enabled=true
+        还可以指定压缩的请求数据累心个，并设置请求压缩的大小下限。
+        feign.compression.request.enabled=true
+        feign.compression.mime-type=text/xml.application/xml,application/json
+        feign.compression.request.min-request-size=2048
+    日志配置：
+        Feign在构建被@FeignClient注解修饰的服务客户端时，会为每一个客户端都创建一个feign.logger实例，我们可以利用该日志对象
+        的DEBUG模式来帮助分析Feign的请求细节。
+            使用logging.level.<FeignClient>的参数配置格式来开启指定Feign客户端的DEBUG日志，其中<FeignClient>为Feign客户端
+        定义接口的完成路径。
+            logging.level.com.didispace.web.HelloService=DEBUG
+            com.didispace.web.HelloService是接口的全路径名
+       由于Feign客户端默认的logger.LEVEL对象定义为NONE级别，加上了如上配置，还是无法实现对DEBUG日志的输出。所以就要
+       修改它的级别。在应用主类中，直接添加Logger.LEVEL的Bean创建。
+        @Bean
+        Logger.LEVEL feignLoggerLevel(){
+            return Logger.Level.FULL;
+        }
+        也可以通过配置类的方式设定。
+        @FeignClient(...,configuration=FeignLoggerLevel.class)
+        public class XXX{}
+
+        对于Feign的Logger级别主要有一下四类：
+            NONE:不记录任何日志
+            BASIC：仅记录请求方法，URL以及响应状态码和执行时间
+            HEADERS:除了记录BASIC级别的信息之外，还会记录请求和响应的头信息
+            FULL：记录所有请求和响应的明细，包括头信息，请求体，元数据等。
