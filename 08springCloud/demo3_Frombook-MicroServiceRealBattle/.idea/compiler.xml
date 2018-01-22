@@ -11,6 +11,8 @@
         <module name="chapter5-hystrix" />
         <module name="chapter6-feign" />
         <module name="chapter7-zuul" />
+        <module name="chapter8-config-client" />
+        <module name="chapter8-config-server" />
         <module name="common-hello-server" />
         <module name="common-hello-service" />
         <module name="common-hello-service2" />
@@ -28,6 +30,9 @@
       <module name="chapter5-hystrix" target="1.8" />
       <module name="chapter6-feign" target="1.8" />
       <module name="chapter7-zuul" target="1.8" />
+      <module name="chapter8-config-client" target="1.8" />
+      <module name="chapter8-config-server" target="1.8" />
+      <module name="chapter8-sping-cloud-config" target="1.8" />
       <module name="common-hello-server" target="1.8" />
       <module name="common-hello-service" target="1.8" />
       <module name="common-hello-service2" target="1.8" />

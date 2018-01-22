@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/common-hello-service/pom.xml" />
         <option value="$PROJECT_DIR$/common-hello-service2/pom.xml" />
         <option value="$PROJECT_DIR$/common-hello-server/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter8-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter8-config-client/pom.xml" />
       </list>
     </option>
   </component>

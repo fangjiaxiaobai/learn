@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/chapter5-hystrix/chapter5-hystrix.iml" filepath="$PROJECT_DIR$/chapter5-hystrix/chapter5-hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter6-feign/chapter6-feign.iml" filepath="$PROJECT_DIR$/chapter6-feign/chapter6-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter7-zuul/chapter7-zuul.iml" filepath="$PROJECT_DIR$/chapter7-zuul/chapter7-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter8-config-client/chapter8-config-client.iml" filepath="$PROJECT_DIR$/chapter8-config-client/chapter8-config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter8-config-server/chapter8-config-server.iml" filepath="$PROJECT_DIR$/chapter8-config-server/chapter8-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-hello-server/common-hello-server.iml" filepath="$PROJECT_DIR$/common-hello-server/common-hello-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-hello-service/common-hello-service.iml" filepath="$PROJECT_DIR$/common-hello-service/common-hello-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-hello-service2/common-hello-service2.iml" filepath="$PROJECT_DIR$/common-hello-service2/common-hello-service2.iml" />
