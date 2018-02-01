@@ -14,21 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b21127d-99c7-4abe-8241-94979335839b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/chapter8-config-client/src/main/java/com/fxb/learn/chapter8configclient/controller/TestController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/chapter8-config-client/src/main/resources/bootstrap.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/chapter8-config-server/doc/summery.fxb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/chapter8-config-server/src/main/resources/bootstrap.properties" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../10jenkins/doc/Jenkins学习记录.docx" afterPath="$PROJECT_DIR$/../../10jenkins/doc/Jenkins学习记录.docx" />
-      <change beforePath="$PROJECT_DIR$/../../10jenkins/doc/jenkins.docx" afterPath="$PROJECT_DIR$/../../10jenkins/doc/jenkins.docx" />
-      <change beforePath="$PROJECT_DIR$/../../10jenkins/doc/jenkins插件使用.docx" afterPath="$PROJECT_DIR$/../../10jenkins/doc/jenkins插件使用.docx" />
-      <change beforePath="$PROJECT_DIR$/../../10jenkins/doc/jenkins遇到的错误.docx" afterPath="$PROJECT_DIR$/../../10jenkins/doc/jenkins遇到的错误.docx" />
-      <change beforePath="$PROJECT_DIR$/../../12design-pattern/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../12design-pattern/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/../../12design-pattern/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../12design-pattern/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb" afterPath="$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/chapter2-springbootlearn/target/" />
@@ -58,12 +45,12 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter6-feign/pom.xml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="summery.fxb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="435">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,38 +59,8 @@
       <file leaf-file-name="FeignApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/FeignApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/service/HelloService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/entity/User/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="174">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsumerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/controller/ConsumerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -112,18 +69,8 @@
       <file leaf-file-name="Chapter7ZuulApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/Chapter7ZuulApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccessFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/filter/AccessFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-908">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="377">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,27 +80,27 @@
         <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter5-hystrix/src/main/java/com/fxb/learn/chapter5hystrix/service/UserService.java">
+      <file leaf-file-name="AccessFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/filter/AccessFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="435">
+              <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summery.fxb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chapter7-zuul/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="159" column="9" lean-forward="false" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+            <state relative-caret-position="609">
+              <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -236,7 +183,6 @@
         <option value="$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/filter/AccessFilter.java" />
         <option value="$PROJECT_DIR$/chapter7-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/chapter7-zuul/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb" />
         <option value="$PROJECT_DIR$/chapter8-sping-cloud-config/doc/summery.fxb" />
         <option value="$PROJECT_DIR$/chapter8-sping-cloud-config/pom.xml" />
         <option value="$PROJECT_DIR$/chapter8-sping-cloud-config/src/main/java/com/fxb/learn/chapter8spingcloudconfig/Chapter8SpingCloudConfigApplication.java" />
@@ -253,6 +199,7 @@
         <option value="$PROJECT_DIR$/chapter8-config-server/src/main/resources/bootstrap.properties" />
         <option value="$PROJECT_DIR$/doc/summery-feign" />
         <option value="$PROJECT_DIR$/chapter6-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb" />
       </list>
     </option>
   </component>
@@ -269,7 +216,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1672" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -293,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,224 +250,13 @@
             <path>
               <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5hystrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="UserController" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5-hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter5hystrix" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="UserService" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="feign" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="feign" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter6-feign" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="fxb" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="feign" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="ConsumerController" type="1a9f42e2:ClassTreeNode" />
+              <item name="chapter7-zuul" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
               <item name="chapter7-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
@@ -573,6 +308,45 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="fxb" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fxb" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fxb" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3_Frombook-MicroServiceRealBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fxb" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="AccessFilter" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="demo3_Frombook-MicroServiceRealBattle" type="b2602c69:ProjectViewProjectNode" />
@@ -591,8 +365,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -921,6 +696,7 @@
       <workItem from="1516241318467" duration="937000" />
       <workItem from="1516275947342" duration="1313000" />
       <workItem from="1516345133508" duration="4919000" />
+      <workItem from="1516622651447" duration="980000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud Ribbon 学习完毕">
       <created>1513322793401</created>
@@ -938,7 +714,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128950000" />
+    <option name="totallyTimeSpent" value="129930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,7 +726,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1616" height="916" extended-state="6" />
+    <frame x="1672" y="-8" width="1616" height="916" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.49745548" order="6" side_tool="false" content_ui="tabs" />
@@ -964,7 +740,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22300771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22300771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1146,13 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter7-zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.4.0.RELEASE/spring-cloud-netflix-core-1.4.0.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/filters/support/FilterConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3132">
@@ -1302,7 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3227,27 +2995,20 @@
               <point x="14.5" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.151618184107795" x="5153.408499620612" y="1542.8218485606335" />
+          <settings layout="Hierarchic Group" zoom="1.151618184107795" x="5153.0" y="1543.0" />
           <SelectedNodes>
             <node>org.springframework.cloud:spring-cloud-starter-feign:jar:1.4.0.RELEASE</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter6-feign/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="667">
           <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/FeignApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3276,33 +3037,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/Chapter7ZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/filter/AccessFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chapter5-hystrix/src/main/java/com/fxb/learn/chapter5hystrix/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="377">
           <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding />
         </state>
@@ -3310,8 +3047,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter7-zuul/doc/summery.fxb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="159" column="9" lean-forward="false" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+        <state relative-caret-position="435">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter6-feign/src/main/java/com/fxb/learn/feign/FeignApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/Chapter7ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter7-zuul/src/main/java/com/fxb/learn/chapter7zuul/filter/AccessFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter7-zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding />
         </state>
       </provider>
