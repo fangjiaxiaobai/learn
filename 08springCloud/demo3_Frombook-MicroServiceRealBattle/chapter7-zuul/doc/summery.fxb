@@ -1,6 +1,6 @@
 ZUUL  网关服务、
     环境搭建：
-        使用注解：@EnableZuulServer;
+        使用注解：@EnableZuulProxy;
         重要的是application.properties文件中：
             根据服务名配置路由地址：
                 zuul.routes.wxy=/wxy/**
