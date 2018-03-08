@@ -5,6 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/12design-pattern.iml" filepath="$PROJECT_DIR$/12design-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter01-factoryDesignPattern/chapter01-factoryDesignPattern.iml" filepath="$PROJECT_DIR$/chapter01-factoryDesignPattern/chapter01-factoryDesignPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter02-singleTon/chapter02-singleTon.iml" filepath="$PROJECT_DIR$/chapter02-singleTon/chapter02-singleTon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter03-proxy/chapter03-proxy.iml" filepath="$PROJECT_DIR$/chapter03-proxy/chapter03-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter04-flyweightPattern/chapter04-flyweightPattern.iml" filepath="$PROJECT_DIR$/chapter04-flyweightPattern/chapter04-flyweightPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05-decorator/chapter05-decorator.iml" filepath="$PROJECT_DIR$/chapter05-decorator/chapter05-decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter06-facade/chapter06-facade.iml" filepath="$PROJECT_DIR$/chapter06-facade/chapter06-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter07-bridge/chapter07-bridge.iml" filepath="$PROJECT_DIR$/chapter07-bridge/chapter07-bridge.iml" />
     </modules>
   </component>
 </project>

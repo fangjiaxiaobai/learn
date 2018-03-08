@@ -1,6 +1,7 @@
 package demo4;
 
 /**
+ *  静态内部类加锁的形式
  * @author fangjiaxiaobai
  * @date 2018/1/7
  */
@@ -10,7 +11,7 @@ public class Demo4SingleTon {
     
     
     private Demo4SingleTon(){}
-    
+ 
     private static synchronized void initializer(){
         if (null!=singleTon) {
             singleTon = new Demo4SingleTon();

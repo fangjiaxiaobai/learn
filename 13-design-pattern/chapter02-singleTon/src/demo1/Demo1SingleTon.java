@@ -9,6 +9,9 @@ package demo1;
  *  注:这种写法是线程不安全的。
  *      如果是多线程的程序，就会很容易出现问题。
  *  所以在多线程程序中是使用单例模式，见demo2
+ *
+ *      懒汉式单例设计模式
+ *
  */
 public class Demo1SingleTon {
     
