@@ -1,8 +1,7 @@
 package com.fxb.microcomponentmybatis2;
 
 import com.fxb.microcomponentmybatis2.model.User;
-import com.fxb.microcomponentmybatis2.model.mapper.UserMapper;
-import org.junit.Assert;
+import com.fxb.microcomponentmybatis2.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
