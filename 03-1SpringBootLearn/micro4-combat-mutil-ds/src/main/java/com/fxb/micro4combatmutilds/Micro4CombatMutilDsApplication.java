@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 /**
- * spring boot切换多数据源实战：
+ *@result failed
+ * @title  spring boot切换多数据源实战：
  *  1、搭建spring boot开发环境。
  *  2.配置依赖
  *  3.编写配置文件
