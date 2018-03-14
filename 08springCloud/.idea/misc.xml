@@ -38,17 +38,7 @@
       <property name="caretWidth" class="java.lang.Integer" />
     </properties>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="userSettingsFile" value="D:\softlist\maven\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" default="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\wangxiyue\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">

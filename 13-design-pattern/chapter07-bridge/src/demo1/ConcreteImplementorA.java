@@ -1,0 +1,12 @@
+package demo1;
+
+/**
+ * @author fangjiaxiaobai@163.com
+ * @date 2018/3/7
+ */
+public class ConcreteImplementorA implements Implementor {
+    @Override
+    public void operation() {
+        System.out.println("this is concreteImplementorA's operation");
+    }
+}

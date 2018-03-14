@@ -10,6 +10,14 @@
         <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-client2/pom.xml" />
         <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/eureka-server2/pom.xml" />
         <option value="$PROJECT_DIR$/chapter3-spring-cloud-eureka/load-balance-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter5-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter6-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter7-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/common-hello-service/pom.xml" />
+        <option value="$PROJECT_DIR$/common-hello-service2/pom.xml" />
+        <option value="$PROJECT_DIR$/common-hello-server/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter8-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/chapter8-config-client/pom.xml" />
       </list>
     </option>
   </component>

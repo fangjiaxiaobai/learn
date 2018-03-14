@@ -1,0 +1,8 @@
+Thymeleaf是一个现代化的服务器端Java模板引擎，适用于Web和独立环境，能够处理HTML、XML、JavaScript、CSS，甚至纯文本。Thymeleaf的主要目标是提供一种优雅和高度可维护的创建模板的方法。
+thmeleaf允许使用6种模板，每个模板称为Template Mode。
+HTML
+XML
+TEXT
+JAVAScript
+CSS
+RAW

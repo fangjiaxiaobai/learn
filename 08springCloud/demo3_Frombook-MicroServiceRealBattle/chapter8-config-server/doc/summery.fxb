@@ -1,0 +1,28 @@
+分布式配置中心：
+
+服务端详解：
+
+    客户端应用从配置管理中获取配置信息遵守下面的执行流程：
+        1.应用启动时，更具bootstrap.properties中配置的应用名{application}，
+    环境名{profile}，分支名{label}，向ConfigServer请求配置信息。
+        2. configServer根据自己维护的git仓库信息和客户端传递过来的配置定位信息去查找配置信息
+        3. 通过git clone命令将找到 的配置信息下载到Config server的文件系统中
+        4. Config Server创建Spring的ApplicationContext实例，并从Git本地仓库中加载配置文件，最后将这些
+    配置内容读取出来返回给客户端应用。
+        5. 客户端应用在获得外部配置文件后加载到客户端的ApplicationContext实例中，配置的内容的优先级高于客户端jar包
+    内的配置内容，所以在Jar包中重复的内容不在被加载。
+
+git配置仓库：
+    spring  cloud config中默认使用git，只需使用spring.cloud.config.server.git.uri属性配置即可。
+    也可以配置本地的磁盘位置：spring.cloud.config.server.git.uri=file://{user_home}/repo
+占位符URI
+    {application}代表当前应用的名称。
+    {profile} 代表当前应用使用的环境
+    {label} 代表使用的分支。如果git的分支和标签名包含"/",那么{label}参数在Http的URL中应该使用(_)来代替。
+
+  代码库:使用服务名作为git仓库名称。
+  配置库：使用服务名-config作为配置库。
+配置多个仓库：
+    ConfigServer处理可以通过application和profile模式来匹配配置仓库之外，还支持通过带有通配符的表达式来匹配。
+    以实现更为复杂的配置需求。
+    当有多个匹配规则，用逗号分割。

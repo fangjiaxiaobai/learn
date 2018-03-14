@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/JavaBasicKnowledge.iml" filepath="$PROJECT_DIR$/JavaBasicKnowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" filepath="$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" />
       <module fileurl="file://$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" filepath="$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jio/jio.iml" filepath="$PROJECT_DIR$/jio/jio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jnio/jnio.iml" filepath="$PROJECT_DIR$/jnio/jnio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/juc/juc.iml" filepath="$PROJECT_DIR$/juc/juc.iml" />
       <module fileurl="file://$PROJECT_DIR$/source-code/source-code.iml" filepath="$PROJECT_DIR$/source-code/source-code.iml" />
     </modules>
   </component>
