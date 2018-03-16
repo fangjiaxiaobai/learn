@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js 学习demo1</title>
+        <script type="text/javascript" src="../vue.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h3>通过一些特殊的HTML语法，将DOM和数据绑定起来。一旦你创建了绑定，DOM将和数据保持同步，每当变更了数据，DOM也会相应地更新。</h3>
+            <h3>MVVM</h3>
+            <h4>ViewModel 是Vue.js的核心，它是一个Vue实例</h4>
+            <h4>
+                Vue实例是作用于某一个Html元素上的，这个元素可以是Html的body,也可以是指定了id的某个元素。首先，我们将上图中的DOM Listeners和Data Bindings看作两个工具，它们是实现双向绑定的关键。
+                    从View侧看，ViewModel中的DOM Listeners工具会帮我们监测页面上DOM元素的变化，如果有变化，则更改Model中的数据；
+                从Model侧看，当我们更新Model中的数据时，Data Bindings工具会帮我们更新页面中的DOM元素。</h4>
+                <h3>使用vue.js 就是定义MVVN各个组成成分的过程</h3>
+                <h4>分为4步：</h4>
+                <h4>1.定义View：在创建Vue实例时，需要传入一个选项对象，选项对象可以包含数据、挂载元素、方法、模生命周期钩子等等。</h4>
+                <h4>2.定义Model</h4>
+                <h4>3.创建一个Vue实例,或者ViewModel,它用于连接View和Model</h4>
+                 <!--这是我们的View-->
+        <!-- <div id="app">
+            {{ message }}
+        </div> -->
+        <div id="app">
+            {{ message }}<br/>
+            <input type="text" v-model="message" />
+        </div>
+
+
+                <h3>Vue.js常用指令</h3>
+                <h4>Vue.js的指令是以v-开头的，它们作用于HTML元素，指令提供了一些特殊的特性，将指令绑定在元素上时，指令会为绑定的目标元素添加一些特殊的行为，我们可以将指令看作特殊的HTML特性（attribute）。</h4>
+                <div border="solid red 1px">
+                <h4>演示一下：</h4>
+                <h4>v-if指令是根据条件表达式的值来执行元素的插入或者删除行为。</h4>
+                <h4>v-show也是条件渲染指令，和v-if指令不同的是，使用v-show指令的元素始终会被渲染到HTML，它只是简单地为元素设置CSS的style属性。</h4>
+                注意：yes, no, age, name这4个变量都来源于Vue实例选项对象的data属性。<br/>
+                数据的yes属性为true，所以"Yes!"会被输出；
+                数据的no属性为false，所以"No!"不会被输出；
+                运算式age >= 25返回true，所以"Age: 28"会被输出；
+                运算式name.indexOf('jack') >= 0返回false，所以"Name: keepfool"不会被输出。
+                
+                <div id="demo2">
+                    <h1>Hello vue.js</h1>
+                    <h1 v-if="yes">Yes!</h1>
+                    <h1 v-if="no">No!</h1>
+                    <h1 v-if="age >= 25">Age:{{ age }}</h1>
+                    <h1 v-if="name.indexOf('jack')>=0">Name: {{ name }}</h1>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo2',
+                        data:{
+                            yes:true,
+                            no: false,
+                            age : 28,
+                            name: 'keepfool '
+                        }
+                    })
+                </script>
+                <div id="demo3">
+                    <h1>Hello vue.js</h1>
+                    <h1 v-show="yes">Yes!</h1>
+                    <h1 v-show="no">No!</h1>
+                    <h1 v-show="age >= 25">Age:{{ age }}</h1>
+                    <h1 v-show="name.indexOf('jack')>=0">Name: {{ name }}</h1>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo3',
+                        data:{
+                            yes:true,
+                            no: false,
+                            age : 28,
+                            name: 'keepfool '
+                        }
+                    })
+                </script>
+            </div>
+                <h4>v-else: v-else元素必须立即跟在v-if，v-show元素的后面，否则不会被识别</h4>
+                <div id="demo4">
+                    <h1>demo4 演示v-else</h1>
+                    <h1 v-if="age >= 25">Age:{{ age }}</h1>
+                    <h1 v-else>Name: {{ name }}</h1>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo4',
+                        data:{
+                            age : 22,
+                            name: 'keepfool'
+                        }
+                    })
+                </script>
+                <h1>v-for ：v-for="item in items" </h1>
+                <div id="demo5">
+                    <h2>demo5 v-for演示</h2>
+                    <table>
+                        <thead>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                            <th>性别</th>
+                        </thead>
+                        <tbody>
+                            <tr v-for="per in person">
+                                <td>{{ per.name }}</td>
+                                <td>{{ per.age }}</td>
+                                <td>{{ per.sex }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo5',
+                        data:{
+                            person:[{
+                                name:"wangxiyue",
+                                age:"24",
+                                sex:"男"
+                            },{
+                                name:"wangsu",
+                                age:24,
+                                sex:"女"
+                            }]
+                        }
+                    })
+                </script>
+                <h1>v-bind指令可以在其名称后面带一个参数，中间放一个冒号隔开，这个参数通常是HTML元素的特性（attribute） </h1>
+                <div id="demo6">
+                    <h2>demo6 v-bind:argument="expression" 演示</h2>
+                    <ul>
+                        <li v-for="n in pageCount">
+                            <a href="javascript:void(0)" v-bind:class="activeNumber===n+1?'active':''">{{ n }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo6',
+                        data:{
+                            activeNumber:1,
+                            pageCount:10
+                        }
+                    })
+                </script>
+                <h1>v-on指令，用于给DOM添加监听事件，它的语法和v-bind类似。 </h1>
+                <div id="demo7">
+                    <h2>demo7 v-on:click="doSomething" 演示</h2>
+                    <button></button>
+                    <input type="text" v-model="message" />
+                    <button v-on:click="greet">Greet</button>
+                    <button v-on:click="say('Hi')">Hi</button>
+                </div>
+                <script type="text/javascript">
+                    var vm = new Vue({
+                        el: '#demo7',
+                        data:{
+                           message:"fangjiaxiaobai"
+                        },
+                        methods:{
+                            greet: function(){
+                                alert("greet"+this.message);
+                            },
+                            say: function(hi){
+                                alert(hi);
+                            }
+                        }
+
+                    })
+                </script>
+                <h4>v-bind和v-on的缩写
+Vue.js为最常用的两个指令v-bind和v-on提供了缩写方式。v-bind指令可以缩写为一个冒号，v-on指令可以缩写为@符号。
+
+<!--完整语法-->
+<a href="javascripit:void(0)" v-bind:class="activeNumber === n + 1 ? 'active' : ''">{{ n + 1 }}</a>
+<!--缩写语法-->
+<a href="javascripit:void(0)" :class="activeNumber=== n + 1 ? 'active' : ''">{{ n + 1 }}</a>
+
+<!--完整语法-->
+<button v-on:click="greet">Greet</button>
+<!--缩写语法-->
+<button @click="greet">Greet</button></h4>
+                <h3>MVVM</h3
+        </div>
+       
+    </body>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+    <script type="text/javascript" src="../vue.js"></script>
+    <script>
+
+        // 这是我们的Model
+        var exampleData = {
+            message: 'Hello World!'
+        }
+
+        // 创建一个 Vue 实例或 "ViewModel"
+        // 它连接 View 与 Model
+        new Vue({
+            el: '#app',
+            data: exampleData
+        })
+
+        // new Vue({
+        //     el:'#'
+        // })
+    </script>
+
+
+
+
+    <div id="app">
+
+            <fieldset>
+                <legend>
+                    Create New Person
+                </legend>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" v-model="newPerson.name"/>
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="text" v-model="newPerson.age"/>
+                </div>
+                <div class="form-group">
+                    <label>Sex:</label>
+                    <select v-model="newPerson.sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <button @click="createPerson">Create</button>
+                </div>
+        </fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="person in people">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                    <td>{{ person.sex }}</td>
+                    <td :class="'text-center'"><button @click="deletePerson($index)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                newPerson: {
+                    name: '',
+                    age: 0,
+                    sex: 'Male'
+                },
+                people: [{
+                    name: 'Jack',
+                    age: 30,
+                    sex: 'Male'
+                }, {
+                    name: 'Bill',
+                    age: 26,
+                    sex: 'Male'
+                }, {
+                    name: 'Tracy',
+                    age: 22,
+                    sex: 'Female'
+                }, {
+                    name: 'Chris',
+                    age: 36,
+                    sex: 'Male'
+                }]
+            },
+            methods:{
+                createPerson: function(){
+                    this.people.push(this.newPerson);
+                    // 添加完newPerson对象后，重置newPerson对象
+                    this.newPerson = {name: '', age: 0, sex: 'Male'}
+                },
+                deletePerson: function(index){
+                    // 删一个数组元素
+                    this.people.splice(index,1);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
