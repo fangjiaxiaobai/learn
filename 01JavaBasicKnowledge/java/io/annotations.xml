@@ -1,0 +1,5 @@
+<root>
+    <item name='java.io.RandomAccessFile'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

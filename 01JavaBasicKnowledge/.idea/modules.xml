@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaBasicKnowledge.iml" filepath="$PROJECT_DIR$/JavaBasicKnowledge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" filepath="$PROJECT_DIR$/chapter1-sort/chapter1-sort.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" filepath="$PROJECT_DIR$/java8-lambda-Stream/java8-lambda-Stream.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jio/jio.iml" filepath="$PROJECT_DIR$/jio/jio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jnio/jnio.iml" filepath="$PROJECT_DIR$/jnio/jnio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/juc/juc.iml" filepath="$PROJECT_DIR$/juc/juc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/source-code/source-code.iml" filepath="$PROJECT_DIR$/source-code/source-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/01JavaBasicKnowledge.iml" filepath="$PROJECT_DIR$/.idea/01JavaBasicKnowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapeter02-locks/chapeter02-locks.iml" filepath="$PROJECT_DIR$/chapeter02-locks/chapeter02-locks.iml" />
     </modules>
   </component>
 </project>

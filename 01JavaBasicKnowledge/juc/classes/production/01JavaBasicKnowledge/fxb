@@ -1,0 +1,78 @@
+一、JAVA IO 概要：
+Java IO一般包含两个部分：1.java.io包中堵塞型IO；2.java.nio包中的非堵塞型IO，通常称为New IO。
+Java New IO的非堵塞技术主要采用了Observer模式，就是有一个具体的观察者和＝监测IO端口，
+如果有数据进入就会立即通知相应的应用程序。这样我们就避免建立多个线程，同时也避免了read等待的时间。
+Java的IO主要包含三个部分：
+    1.流式部分――IO的主体部分；
+    2.非流式部分――主要包含一些辅助流式部分的类，如：File类、RandomAccessFile类和FileDescriptor等类；
+    3.文件读取部分的与安全相关的类，如：SerializablePermission类。以及与本地操作系统相关的文件系统的类，如：FileSystem类和Win32FileSystem类和WinNTFileSystem类。
+流式部分可以概括为：两个对应一个桥梁。
+    两个对应指：1.字节流（Byte Stream）和字符流（Char Stream）的对应；2.输入和输出的对应。
+    一个桥梁指：从字节流到字符流的桥梁。对应于输入和输出为InputStreamReader和OutputStreamWriter。
+在流的具体类中又可以具体分为：
+    1.介质流（Media Stream或者称为原始流Raw Stream）――主要指一些基本的流，他们主要是从具体的介质上，如：文件、内存缓冲区（Byte数组、Char数组、StringBuffer对象）等，读取数据；
+    2.过滤流（Filter Stream）――主要指所有FilterInputStream/FilterOutputStream和FilterReader/FilterWriter的子类，主要是对其包装的类进行某些特定的处理，如：缓存等。
+
+三、IO中的流：
+    流具有最基本的特点：“One dimension , one direction .” 即流是一维的，同时流是单向的。
+1.字节流：
+    1.1 IO中的输入字节流：
+    InputStream:
+        ByteArrayInputStream:将内存中的Byte数组适配为一个InputStream
+        FileInputStream
+        FilterInputStream  // 装饰输入字节流
+            BufferedInputStream：使用该对象阻止每次读取一个字节都会频繁操作IO。将字节读取一个缓存区，从缓存区读取。
+            DataInputStream ：一般和DataOutputStream配对使用,完成基本数据类型的读写。
+            LineNumberInputStream：跟踪输入流中的行号。可以调用getLineNumber( )和 setLineNumber(int)方法得到和设置行号。
+            PushBackInputStream：可以在读取最后一个byte 后将其放回到缓存中。
+        ObjectInputStream
+        PipedInputStream:读取从对应PipedOutputStream写入的数据。在流中实现了管道的概念
+        SequenceInputStream:将2个或者多个InputStream 对象转变为一个InputStream.
+        StringBufferInputStream:将内存中的字符串适配为一个InputStream。
+    1.2 IO 中的输出字节流：
+        OutputStream:  所有的输出字节流的父类
+            ByteArrayOutputStream:在内存中创建一个buffer。所有写入此流中的数据都被放入到此buffer中。
+            FileOutputStream:将信息写入文件中。
+            FilterOutputStream:实现装饰器功能的抽象类。为其它OutputStream对象增加额外的功能。
+            BufferedOutputStream:
+                DataOutputStream:通常和DataInputStream配合使用，使用它可以写入基本数据类新。
+                PrintStream:产生具有格式的输出信息。（一般地在java程序中DataOutputStream用于数据的存储，即J2EE中持久层完成的功能，PrintStream完成显示的功能，类似于J2EE中表现层的功能）
+                BufferedOutputStream:使用它可以避免频繁地向IO写入数据，数据一般都写入一个缓存区，在调用flush方法后会清空缓存、一次完成数据的写入。
+            ObjectOutputStream:
+            PipedOutputStream:任何写入此对象的信息都被放入对应PipedInputStream 对象的缓存中，从而完成线程的通信，实现了“管道”的概念。
+2.字符流：
+    since JDK1.1
+    尽管Sun不建议使用原始的流库中的某些功能，但原来的流依然得到了保留，不仅为了保持向后兼容，主要原因是新库不是旧库的替代，而是对旧库的增强。
+    从以下两点可以明显地看出：
+        (1) 在老式的类层次结构里加入了新的类，这表明 Sun公司没有放弃老式流库的意图。
+        (2) 在许多情况下，新库中类的使用需要联合老结构中的类。为达到这个目的，需要使用一些“桥”类，
+            如：InputStreamReader将一个InputStream转换成Reader；OutputStreamWriter将一个OutputStream转换成Writer。
+    那么Sun为什么在Java 1.1里添加了Reader和Writer层次，最重要的原因便是国际化（Internationalization――i18n）的需求。
+    老式IO流层次结构只支持8位字节流，不能很好地控制16位的Unicode字符。Java本身支持Unicode，Sun又一致吹嘘其支持Unicode，
+    因此有必要实现一个支持Unicode的流的层次结构，所以出现了Reader和Writer层次，以提供对所有IO操作中的Unicode的支持。
+    除此之外，新库也对速度进行了优化，可比旧库更快地运行。
+
+    2.1 IO中的输入字符流：
+        Reader：
+            BufferedReader:
+            LineNumberReader:
+            CharArrayReader:
+            FilterReader:
+            PushbackReader:
+            InputStreamReader:
+                FileReader:
+            PipedReader:
+            StringReader:
+    2.2 IO中的输出字符流：
+        Writer：所有的输出字符流的父类
+            BufferedWriter:
+            CharArrayWriter:
+            FilterWriter:
+            OutputStreamWriter:
+                FileWriter:
+            PipedWriter:与其它线程共用的管道中写入数据
+            PrintWriter:
+            StringWriter:
+
+
+

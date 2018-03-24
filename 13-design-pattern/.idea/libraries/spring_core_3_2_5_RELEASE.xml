@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="spring-core-3.2.5.RELEASE">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/chapter03-proxy/src/spring-core-3.2.5.RELEASE.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

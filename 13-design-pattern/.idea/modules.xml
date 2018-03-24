@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/12design-pattern.iml" filepath="$PROJECT_DIR$/12design-pattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter01-factoryDesignPattern/chapter01-factoryDesignPattern.iml" filepath="$PROJECT_DIR$/chapter01-factoryDesignPattern/chapter01-factoryDesignPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter02-singleTon/chapter02-singleTon.iml" filepath="$PROJECT_DIR$/chapter02-singleTon/chapter02-singleTon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter03-proxy/chapter03-proxy.iml" filepath="$PROJECT_DIR$/chapter03-proxy/chapter03-proxy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter04-flyweightPattern/chapter04-flyweightPattern.iml" filepath="$PROJECT_DIR$/chapter04-flyweightPattern/chapter04-flyweightPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter05-decorator/chapter05-decorator.iml" filepath="$PROJECT_DIR$/chapter05-decorator/chapter05-decorator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter06-facade/chapter06-facade.iml" filepath="$PROJECT_DIR$/chapter06-facade/chapter06-facade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter07-bridge/chapter07-bridge.iml" filepath="$PROJECT_DIR$/chapter07-bridge/chapter07-bridge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter08-strategy/chapter08-strategy.iml" filepath="$PROJECT_DIR$/chapter08-strategy/chapter08-strategy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter09-templateMethod/chapter09-templateMethod.iml" filepath="$PROJECT_DIR$/chapter09-templateMethod/chapter09-templateMethod.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter10-observer/chapter10-observer.iml" filepath="$PROJECT_DIR$/chapter10-observer/chapter10-observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/13-design-pattern.iml" filepath="$PROJECT_DIR$/.idea/13-design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../08springCloud/demo3_Frombook-MicroServiceRealBattle/chapter1-total_introduction/chapter1-total_introduction.iml" filepath="$PROJECT_DIR$/../08springCloud/demo3_Frombook-MicroServiceRealBattle/chapter1-total_introduction/chapter1-total_introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter11-mediator/chapter11-mediator.iml" filepath="$PROJECT_DIR$/chapter11-mediator/chapter11-mediator.iml" />
     </modules>
   </component>
 </project>

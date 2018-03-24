@@ -31,19 +31,6 @@ public class Demo2SingleTon {
     }
     
     /**
-     *  这种方式会在性能上有所下降
-     *  每次调用getInstance方式，都会加锁。
-     * @return
-     */
-//    public static synchronized Demo2SingleTon getInstance(){
-//        if (null!=singleTon) {
-//            singleTon = new Demo2SingleTon();
-//        }
-//        return singleTon;
-//    }
-//
-    
-    /**
      *  双重校验锁的方式
      *  这种方式，只是会在创建的对象的时候加锁，也就是第一次创建对象的时候加锁。
      * @return
@@ -58,6 +45,4 @@ public class Demo2SingleTon {
         }
         return singleTon;
     }
-
-
 }
