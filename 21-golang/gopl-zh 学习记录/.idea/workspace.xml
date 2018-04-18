@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad8c1a74-e4e1-410d-8444-f4c5e404184d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/config/MyPasswordEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/filter/JwtLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/rest/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/services/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/springboot-jwt/src/main/java/com/fxb/jwt/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06spring-Security/demo09-oauth2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06spring-Security/demo09-oauth2/src/main/java/com/fxb/secoauth/Oauth2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06spring-Security/demo09-oauth2/src/main/java/com/fxb/secoauth/config/Oauth2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06spring-Security/demo09-oauth2/src/main/java/com/fxb/secoauth/services/MyUserDetialsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06spring-Security/demo09-oauth2/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/MyComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/SayHelloAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/SetterGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/settergetter.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/settergetterUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20-ideaPlugins/src/settergetterUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter01-synopsis/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter2-structure/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter2-structure/demo1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter2-structure/demo2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter2-structure/demo3.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/config/AuthorSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/config/AuthorSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/config/WebConfiguartion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/config/WebConfiguartion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/filter/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/web/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/java/com/fxb/springBootLearn/web/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/webapp/WEB-INF/jsp/page/page1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/webapp/WEB-INF/jsp/page/page1.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/test/java/com/fxb/springBootLearn/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter1-HelloWorld/src/test/java/com/fxb/springBootLearn/ExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/web/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/java/com/fxb/springBootLearn/web/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/test/java/com/fxb/springBootLearn/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter2-jpa-hibernate/src/test/java/com/fxb/springBootLearn/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/java/com/fxb/springBootLearn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/java/com/fxb/springBootLearn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/java/com/fxb/springBootLearn/web/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/java/com/fxb/springBootLearn/web/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/test/java/com/fxb/springBootLearn/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter3-log/src/test/java/com/fxb/springBootLearn/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/web/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/java/com/fxb/springBootLearn/web/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/resources/mybatis/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/main/resources/mybatis/CustomerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/test/java/com/fxb/springBootLearn/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter4-mybatis/src/test/java/com/fxb/springBootLearn/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/java/com/fxb/SpringBootLearn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/java/com/fxb/SpringBootLearn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/java/com/fxb/SpringBootLearn/web/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/java/com/fxb/SpringBootLearn/web/DemoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter5-defineSpringtApplication/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter6-thymeleaf/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter6-thymeleaf/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/java/com/fxb/demo1/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/example-chapter7-integrationSpringMVC/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/main/java/com/fxb/hotswap/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/main/java/com/fxb/hotswap/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/main/java/com/fxb/hotswap/HotSwapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/main/java/com/fxb/hotswap/HotSwapApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/test/java/com/fxb/hotswap/HotSwapApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro1-hot-swap/src/test/java/com/fxb/hotswap/HotSwapApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/src/main/java/com/fxb/component/ComponentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/src/main/java/com/fxb/component/ComponentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/src/test/java/com/fxb/component/ComponentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro2-component/src/test/java/com/fxb/component/ComponentApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/Micro3ComponentMybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/Micro3ComponentMybatisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/java/com/fxb/micro3componentmybatis/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/resources/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/main/resources/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/test/java/com/fxb/micro3componentmybatis/Micro3ComponentMybatisApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis/src/test/java/com/fxb/micro3componentmybatis/Micro3ComponentMybatisApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/MicroComponentMybatis2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/MicroComponentMybatis2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/java/com/fxb/microcomponentmybatis2/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/test/java/com/fxb/microcomponentmybatis2/MicroComponentMybatis2ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro3-component-mybatis2/src/test/java/com/fxb/microcomponentmybatis2/MicroComponentMybatis2ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/Micro4CombatMutilDsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/Micro4CombatMutilDsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/DynamicDataSourceRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/annotation/TargetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/config/annotation/TargetDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/java/com/fxb/micro4combatmutilds/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/test/java/com/fxb/micro4combatmutilds/Micro4CombatMutilDsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/micro4-combat-mutil-ds/src/test/java/com/fxb/micro4combatmutilds/Micro4CombatMutilDsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-1SpringBootLearn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-1SpringBootLearn/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06spring-Security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../06spring-Security/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chapter2-structure/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="878">
+              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo3.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter2-structure/demo3.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="e#14#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo1.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter2-structure/demo1.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo2.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter2-structure/demo2.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="D:\softlist\fxb_go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://D:/softlist/fxb_go/bin" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/chapter01-synopsis/README.md" />
+        <option value="$PROJECT_DIR$/chapter01-synopsis/hello.go" />
+        <option value="$PROJECT_DIR$/chapter2-structure/demo1.go" />
+        <option value="$PROJECT_DIR$/chapter2-structure/demo2.go" />
+        <option value="$PROJECT_DIR$/chapter2-structure/demo3.go" />
+        <option value="$PROJECT_DIR$/chapter2-structure/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1947" />
+    <option name="y" value="-4" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gopl-zh 学习记录" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gopl-zh 学习记录" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gopl-zh 学习记录" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gopl-zh 学习记录" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2-structure" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\fxb_myApplication\Learn\21-golang\gopl-zh 学习记录" />
+      <recent name="E:\fxb_myApplication\Learn\21-golang\gopl-zh 学习记录\chapter01-synopsis" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build demo3.go">
+    <configuration name="go build demo1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gopl-zh 学习记录" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/chapter2-structure/demo1.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build demo2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gopl-zh 学习记录" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/chapter2-structure/demo2.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build demo3.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gopl-zh 学习记录" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/chapter2-structure/demo3.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build demo6_fatchAll.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gopl-zh 学习记录" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/demo6_fatchAll.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build demo6_fatchAll.go" />
+      <item itemvalue="Go Build.go build demo1.go" />
+      <item itemvalue="Go Build.go build demo2.go" />
+      <item itemvalue="Go Build.go build demo3.go" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build demo3.go" />
+        <item itemvalue="Go Build.go build demo2.go" />
+        <item itemvalue="Go Build.go build demo1.go" />
+        <item itemvalue="Go Build.go build demo6_fatchAll.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1672" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18903226" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.31952018" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.29683378" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3991276" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32910052" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2288">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo3.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo1.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo3.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo1.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter01-synopsis/demo3_dup.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter01-synopsis/demo6_fatchAll.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter01-synopsis/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter01-synopsis/hello.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo1.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/demo3.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2-structure/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
